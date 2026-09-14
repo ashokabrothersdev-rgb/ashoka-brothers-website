@@ -54,7 +54,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="font-canela text-[20px] leading-[30px] tracking-[1px] text-[#2b2b2b]">
+              <h3 className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]">
                 Quick Links
               </h3>
               <ul className="mt-6 space-y-0 text-[16px] leading-8 text-[#777]">
