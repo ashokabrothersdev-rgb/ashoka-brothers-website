@@ -28,25 +28,28 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative min-h-[640px] overflow-hidden lg:min-h-[800px]">
+    <section
+      id="contact"
+      className="relative min-h-160 overflow-hidden lg:min-h-200"
+    >
       <Image
-        src="/form-bg.png"
-        alt=""
+        src="/images/form-bg.png"
+        alt="Contact Form Background"
         fill
-        className="object-cover"
+        className="object-center"
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-black/30 opacity-50" />
 
-      <div className="relative mx-auto flex min-h-[640px] max-w-[1536px] items-center justify-end px-5 py-16 sm:px-10 lg:min-h-[800px] lg:px-20">
-        <div className="w-full max-w-[400px] border-t border-l border-white bg-[#1d1d1d]/55 p-10 shadow-[inset_-4.5px_-4.5px_1.5px_-5.25px_rgba(255,255,255,0.5),inset_4.5px_4.5px_1.5px_-5.25px_rgba(255,255,255,0.5)] backdrop-blur-[18px]">
-          <p className="font-sans text-[14px] leading-[17px] tracking-[0.7px] text-white uppercase">
+      <div className="relative mx-auto flex min-h-160 max-w-384 items-center justify-end px-5 py-16 sm:px-10 lg:min-h-200 lg:px-20">
+        <div className="w-full max-w-100 border-t border-l border-white bg-[#ffffff]/5 p-10 shadow-[inset_-4.5px_-4.5px_1.5px_-5.25px_rgba(255,255,255,0.5),inset_4.5px_4.5px_1.5px_-5.25px_rgba(255,255,255,0.5)] backdrop-blur-[18px]">
+          <p className="font-sans text-[14px] leading-4.25 tracking-[0.7px] text-white uppercase">
             Connect
           </p>
-          <h2 className="mt-2 font-display text-[32px] leading-[50px] font-light tracking-[2px] text-white uppercase sm:text-[40px] sm:leading-[60px]">
+          <h2 className="mt-2 font-canela text-[32px] leading-12.5 tracking-[2px] text-white uppercase sm:text-[38px] sm:leading-15">
             Get in Touch
           </h2>
-          <div className="mt-4 h-[3px] w-[60px] bg-white" />
+          <div className="mt-4 h-0.75 w-15 bg-white" />
 
           <form className="mt-8 flex flex-col gap-6" onSubmit={handleSubmit}>
             <label className="flex w-full flex-col gap-1.5">
@@ -56,7 +59,9 @@ export function ContactSection() {
                 type="text"
                 placeholder="Add Name"
                 value={form.name}
-                onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
+                onChange={(event) =>
+                  setForm((prev) => ({ ...prev, name: event.target.value }))
+                }
                 className="h-12 w-full border border-white bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic"
               />
             </label>
@@ -68,26 +73,32 @@ export function ContactSection() {
                 type="email"
                 placeholder="Add Email"
                 value={form.email}
-                onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
+                onChange={(event) =>
+                  setForm((prev) => ({ ...prev, email: event.target.value }))
+                }
                 className="h-12 w-full border border-white bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic"
               />
             </label>
 
             <label className="flex w-full flex-col gap-1.5">
-              <span className="text-[16px] leading-5 text-white">Phone No.</span>
+              <span className="text-[16px] leading-5 text-white">
+                Phone No.
+              </span>
               <input
                 name="phone"
                 type="tel"
                 placeholder="Add Number"
                 value={form.phone}
-                onChange={(event) => setForm((prev) => ({ ...prev, phone: event.target.value }))}
+                onChange={(event) =>
+                  setForm((prev) => ({ ...prev, phone: event.target.value }))
+                }
                 className="h-12 w-full border border-white bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic"
               />
             </label>
 
             <button
               type="submit"
-              className="mt-2 h-10 w-[116px] border border-white bg-white text-[14px] leading-[14px] tracking-[0.7px] text-[#a87d53] uppercase transition-opacity hover:opacity-80"
+              className="mt-2 h-10 w-29 border border-white bg-white text-[14px] leading-3.5 tracking-[0.7px] text-[#a87d53] uppercase transition-opacity hover:opacity-80"
             >
               Submit
             </button>

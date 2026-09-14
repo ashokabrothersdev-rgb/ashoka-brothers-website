@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Alexandria,
-  Cormorant_Garamond,
-  Figtree,
-  Gilda_Display,
-  Jost,
-} from "next/font/google";
+import { Figtree, Gilda_Display, Jost } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
@@ -16,28 +10,16 @@ const figtree = Figtree({
   style: ["normal", "italic"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const gilda = Gilda_Display({
+  variable: "--font-gilda",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400"],
 });
 
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
   weight: ["400", "700"],
-});
-
-const alexandria = Alexandria({
-  variable: "--font-alexandria",
-  subsets: ["latin"],
-  weight: ["700"],
-});
-
-const gilda = Gilda_Display({
-  variable: "--font-gilda",
-  subsets: ["latin"],
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -50,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${figtree.variable} ${cormorant.variable} ${jost.variable} ${alexandria.variable} ${gilda.variable} h-full antialiased`}
+      className={`${figtree.variable} ${gilda.variable} ${jost.variable} h-full antialiased`}
     >
       <body className="min-h-full overflow-x-hidden bg-white text-[#282828]">
         <Navbar />

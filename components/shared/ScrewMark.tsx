@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ScrewMarkProps = {
   className?: string;
   size?: number;
@@ -5,9 +7,9 @@ type ScrewMarkProps = {
 
 export function ScrewMark({ className = "", size = 17 }: ScrewMarkProps) {
   return (
-    <img
-      src="/screw-dot.svg"
-      alt=""
+    <Image
+      src="/icons/screw-dot.svg"
+      alt="Screw Dot"
       width={13}
       height={13}
       className={className}
