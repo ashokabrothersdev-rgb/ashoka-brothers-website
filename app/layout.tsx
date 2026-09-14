@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Alexandria, Cormorant_Garamond, Figtree, Gilda_Display, Jost } from "next/font/google";
+import {
+  Alexandria,
+  Cormorant_Garamond,
+  Figtree,
+  Gilda_Display,
+  Jost,
+} from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/shared/Navbar";
+import { Footer } from "@/components/shared/Footer";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -44,7 +52,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${figtree.variable} ${cormorant.variable} ${jost.variable} ${alexandria.variable} ${gilda.variable} h-full antialiased`}
     >
-      <body className="min-h-full overflow-x-hidden bg-white text-[#282828]">{children}</body>
+      <body className="min-h-full overflow-x-hidden bg-white text-[#282828]">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
