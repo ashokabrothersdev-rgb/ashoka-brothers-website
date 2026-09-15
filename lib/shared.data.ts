@@ -26,17 +26,17 @@ const quickLinks = [
 const socials = [
   {
     href: "https://linkedin.com",
-    src: "/icons/linkedin.svg",
+    src: "/icons/Linkedin.svg",
     label: "LinkedIn",
     size: 36,
   },
   {
     href: "https://facebook.com",
-    src: "/icons/facebook.svg",
+    src: "/icons/Facebook.svg",
     label: "Facebook",
     size: 36,
   },
-  { href: "https://x.com", src: "/icons/twitter.svg", label: "Twitter", size: 36 },
+  { href: "https://x.com", src: "/icons/Twitter.svg", label: "Twitter", size: 36 },
   { href: "#contact", src: "/icons/location.svg", label: "Location", size: 36 },
 ];
 
