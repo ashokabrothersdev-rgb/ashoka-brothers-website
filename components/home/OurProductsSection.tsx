@@ -126,7 +126,7 @@ export function OurProductsSection() {
                       sizes="(max-width: 1024px) 90vw, 560px"
                       priority
                     />
-                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-linear-to-t from-black/60 to-transparent px-4 pb-4 pt-12 sm:px-7.5 sm:pb-5">
+                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-linear-to-t from-black/60 to-transparent px-30 pb-4 pt-12 sm:px-7.5 sm:pb-5">
                       <button
                         type="button"
                         className="flex items-center gap-5 text-[13px] cursor-pointer uppercase leading-4 tracking-[0.08em] text-white transition-opacity hover:opacity-80"
