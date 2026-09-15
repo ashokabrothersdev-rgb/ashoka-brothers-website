@@ -8,26 +8,20 @@ import { ProductCatalogSection } from "@/components/home/ProductCatalogSection";
 import { RangeOfProductsSection } from "@/components/home/RangeOfProductsSection";
 import { StatsSection } from "@/components/home/StatsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { Footer } from "@/components/shared/Footer";
-import { Navbar } from "@/components/shared/Navbar";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
-        <HeroSection />
-        <DriveItHomeSection />
-        <AboutSection />
-        <FactorySection />
-        <OurProductsSection />
-        <RangeOfProductsSection />
-        <StatsSection />
-        <ProductCatalogSection />
-        <TestimonialsSection />
-        <ContactSection />
-      </main>
-      <Footer />
+      <HeroSection />
+      {/* <DriveItHomeSection /> */}
+      <AboutSection />
+      <FactorySection />
+      {/* <OurProductsSection /> */}
+      <RangeOfProductsSection />
+      <StatsSection />
+      <ProductCatalogSection />
+      <TestimonialsSection />
+      <ContactSection />
     </>
   );
 }

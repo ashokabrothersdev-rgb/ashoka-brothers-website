@@ -1,6 +1,12 @@
+import Image from "next/image";
+
 export function HeroSection() {
   return (
-    <section id="home" className="relative h-screen min-h-[640px] w-full overflow-hidden bg-black">
+    <section
+      id="home"
+      className="relative h-screen min-h-160 w-full overflow-hidden"
+    >
+      {/* Hero Video */}
       <video
         className="absolute inset-0 size-full object-cover"
         autoPlay
@@ -10,18 +16,28 @@ export function HeroSection() {
         preload="auto"
         aria-label="Ashoka Brothers product highlight"
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
+        <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[355px] bg-gradient-to-b from-black/55 to-transparent" />
+      {/* Gradient Overlay */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-88.75 bg-linear-to-b from-black/55 to-transparent" />
+
+      {/* Black Overlay */}
       <div className="pointer-events-none absolute inset-0 bg-black/15" />
 
+      {/* Chat Icon */}
       <a
         href="#contact"
-        className="absolute right-6 bottom-10 z-10 sm:right-16 lg:right-[60px] lg:bottom-[70px]"
+        className="absolute right-6 bottom-10 z-10 sm:right-16 lg:right-36 lg:bottom-16.25"
         aria-label="Open chat"
       >
-        <img src="/chat-icon.svg" alt="" width={60} height={60} className="size-[60px]" />
+        <Image
+          src="/icons/chat-icon.svg"
+          alt="Chat Icon"
+          width={70}
+          height={70}
+          className="size-17.5"
+        />
       </a>
     </section>
   );

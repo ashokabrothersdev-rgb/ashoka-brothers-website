@@ -1,27 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-const links = [
-  { href: "#home", label: "Home" },
-  { href: "#our-story", label: "Our Story" },
-  { href: "#products", label: "Products" },
-  { href: "#range", label: "Lorem Ipsum" },
-  { href: "#career", label: "Career" },
-  { href: "#testimonials", label: "Lorem Ipsum" },
-  { href: "#contact", label: "Contact Us" },
-];
+import { links } from "@/lib/shared.data";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <div className="mx-auto flex h-[90px] max-w-[1536px] items-center justify-between px-5 sm:px-10 lg:px-[60px]">
+      <div className="mx-auto flex h-22.5 max-w-384 items-center justify-between px-5 sm:px-10 lg:px-15">
         <Link href="#home" className="relative z-10 shrink-0">
-          <img
-            src="/logo.svg"
+          <Image
+            src="/icons/logo.svg"
             alt="Ashoka Brothers"
             width={275}
             height={64}
@@ -34,7 +26,7 @@ export function Navbar() {
             <Link
               key={`${link.href}-${link.label}`}
               href={link.href}
-              className="font-sans text-[13px] font-semibold uppercase leading-[13px] tracking-[0.65px] text-white transition-opacity hover:opacity-70"
+              className="font-sans text-[13px] font-semibold uppercase leading-3.25 tracking-[0.65px] text-white transition-opacity hover:opacity-70"
             >
               {link.label}
             </Link>
@@ -51,17 +43,19 @@ export function Navbar() {
           <span className="sr-only">Menu</span>
           <span className="flex w-6 flex-col gap-1.5">
             <span
-              className={`h-px w-full bg-white transition ${open ? "translate-y-[7px] rotate-45" : ""}`}
+              className={`h-px w-full bg-white transition ${open ? "translate-y-1.75 rotate-45" : ""}`}
             />
-            <span className={`h-px w-full bg-white transition ${open ? "opacity-0" : ""}`} />
             <span
-              className={`h-px w-full bg-white transition ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
+              className={`h-px w-full bg-white transition ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`h-px w-full bg-white transition ${open ? "-translate-y-1.75 -rotate-45" : ""}`}
             />
           </span>
         </button>
       </div>
 
-      <div className="pointer-events-none mx-auto h-px max-w-[1416px] bg-white/70" />
+      <div className="pointer-events-none mx-auto h-px max-w-354 bg-white/30" />
 
       {open ? (
         <div className="border-b border-white/20 bg-black/90 px-5 py-6 backdrop-blur-md lg:hidden">
