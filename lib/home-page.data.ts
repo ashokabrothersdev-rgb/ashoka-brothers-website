@@ -27,13 +27,13 @@ export const testimonials: Testimonial[] = [
 
 export const products = [
   {
-    src: "/product-1.png",
+    src: "/images/product-2.png",
     alt: "Gold wood screw driven into timber",
     width: 1536,
     height: 1268,
   },
   {
-    src: "/product-2.png",
+    src: "/images/product-1.png",
     alt: "Silver self-tapping screw standing upright",
     width: 1200,
     height: 1000,

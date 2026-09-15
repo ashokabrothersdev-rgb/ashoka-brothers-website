@@ -16,7 +16,7 @@ export default function Home() {
       <DriveItHomeSection />
       <AboutSection />
       <FactorySection />
-      {/* <OurProductsSection /> */}
+      <OurProductsSection />
       <RangeOfProductsSection />
       <StatsSection />
       <ProductCatalogSection />
