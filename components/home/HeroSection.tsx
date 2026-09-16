@@ -28,7 +28,7 @@ export function HeroSection() {
       {/* Chat Icon */}
       <a
         href="#contact"
-        className="absolute right-6 bottom-10 z-10 sm:right-16 lg:right-36 lg:bottom-16.25"
+        className="absolute right-6 bottom-10 z-10 sm:right-16 lg:right-36 lg:bottom-16.25 max-sm:hidden"
         aria-label="Open chat"
       >
         <Image

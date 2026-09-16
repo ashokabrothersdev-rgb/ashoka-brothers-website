@@ -14,10 +14,10 @@ export function ProductCatalogSection() {
         <ScrewMark className="absolute bottom-7.5 left-7.5 rotate-45" size={17} />
         <ScrewMark className="absolute right-7.5 bottom-7.5 rotate-45" size={17} />
 
-        <h2 className="font-canela text-[40px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px] ">
+        <h2 className="font-canela text-[28px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px] ">
           Products
         </h2>
-        <ul className="mt-7.5 font-canela text-[16px] leading-10 tracking-[0.9px] text-[#282828]">
+        <ul className="sm:mt-7.5 mt-5 font-canela text-[16px] leading-10 tracking-[0.9px] text-[#282828]">
           {productCatalog.map((item) => (
             <li key={item}>{item}</li>
           ))}

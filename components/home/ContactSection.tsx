@@ -48,7 +48,7 @@ export function ContactSection() {
           <p className="font-sans text-[14px] leading-4.25 tracking-[0.7px] text-white uppercase">
             Connect
           </p>
-          <h2 className="mt-2 font-canela text-[32px] leading-12.5 tracking-[2px] text-white uppercase sm:text-[38px] sm:leading-15">
+          <h2 className="mt-2 font-canela text-[28px] leading-12.5 tracking-[2px] text-white uppercase sm:text-[38px] sm:leading-15">
             Get in Touch
           </h2>
           <div className="mt-4 h-0.75 w-15 bg-white" />

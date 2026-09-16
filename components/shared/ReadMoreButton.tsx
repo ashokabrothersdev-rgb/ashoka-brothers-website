@@ -15,7 +15,7 @@ export function ReadMoreButton({ href = "#products" }: ReadMoreButtonProps) {
         aria-hidden
         className="pointer-events-none absolute -right-0.75 bottom-[-3.2px] h-[50.6px] w-45.5 rounded-xs border border-[#101010]"
       />
-      <span className="relative z-10 flex items-center gap-3 font-canela text-[16px] uppercase leading-6.5 tracking-[0.04em] text-[#101010]/80">
+      <span className="relative z-10 flex items-center gap-3 font-canela sm:text-[16px] text-[14px] uppercase sm:leading-6.5 leading-5 tracking-[0.04em] text-[#101010]/80">
         <svg
           width="15"
           height="12"
