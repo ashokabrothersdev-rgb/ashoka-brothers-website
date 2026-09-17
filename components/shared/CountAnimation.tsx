@@ -38,14 +38,14 @@ export function CountAnimation({
   return (
     <div ref={ref} className="flex flex-col items-center text-center">
       <p className="font-jost font-bold text-[#ffc30b]">
-        <span className="text-[72px] leading-none sm:text-[120px] lg:text-[172px] ">
+        <span className="text-[38px] leading-none sm:text-[120px] lg:text-[172px] ">
           {display}
         </span>
-        <span className="text-[28px] leading-none sm:text-[40px] lg:text-[48px] ">
+        <span className="text-[24px] leading-none sm:text-[40px] lg:text-[48px] ">
           {suffix}
         </span>
       </p>
-      <p className="font-jost font-normal text-[18px] leading-6 text-[#272626] sm:text-[24px]">
+      <p className="font-jost font-normal text-[14px] leading-5 sm:leading-6 text-[#272626] sm:text-[24px]">
         {label}
       </p>
     </div>

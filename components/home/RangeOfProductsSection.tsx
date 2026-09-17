@@ -5,7 +5,7 @@ export function RangeOfProductsSection() {
   return (
     <section id="range" className="relative overflow-hidden pt-16 lg:pt-25">
       <div className="relative mx-auto max-w-384 px-5">
-        <h2 className="text-center font-canela text-[32px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]">
+        <h2 className="text-center font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]">
           Range of Products
         </h2>
       </div>

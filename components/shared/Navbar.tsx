@@ -42,15 +42,21 @@ export function Navbar() {
           onClick={() => setOpen((value) => !value)}
         >
           <span className="sr-only">Menu</span>
-          <span className="flex w-6 flex-col gap-1.5">
+          <span className="relative block h-4.25 w-6">
             <span
-              className={`h-px w-full bg-white transition ${open ? "translate-y-1.75 rotate-45" : ""}`}
+              className={`absolute left-0 h-px w-full origin-center bg-white transition duration-300 ${
+                open ? "top-1/2 -translate-y-1/2 rotate-45" : "top-0"
+              }`}
             />
             <span
-              className={`h-px w-full bg-white transition ${open ? "opacity-0" : ""}`}
+              className={`absolute top-1/2 right-0 h-px w-5 -translate-y-1/2 bg-white transition duration-300 ${
+                open ? "opacity-0" : ""
+              }`}
             />
             <span
-              className={`h-px w-full bg-white transition ${open ? "-translate-y-1.75 -rotate-45" : ""}`}
+              className={`absolute left-0 h-px w-full origin-center bg-white transition duration-300 ${
+                open ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-0"
+              }`}
             />
           </span>
         </button>
