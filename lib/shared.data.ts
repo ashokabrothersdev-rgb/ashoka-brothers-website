@@ -3,7 +3,6 @@ export const links = [
   { href: "/about-us", label: "Our Story" },
   { href: "/products", label: "Products" },
   { href: "/blogs", label: "Blogs" },
-  { href: "/career", label: "Career" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 
@@ -19,7 +18,6 @@ const quickLinks = [
   { href: "/about-us", label: "About Us" },
   { href: "/career", label: "Careers" },
   { href: "/location", label: "Location" },
-  { href: "/term-and-conditions", label: "Term & Conditions" },
 ];
 
 const socials = [
@@ -36,7 +34,7 @@ const socials = [
     size: 36,
   },
   { href: "https://x.com", src: "/icons/Twitter.svg", label: "Twitter", size: 36 },
-  { href: "/contact-us", src: "/icons/location.svg", label: "Location", size: 36 },
+  { href: "/", src: "/icons/location.svg", label: "Location", size: 36 },
 ];
 
 export { contactLinks, quickLinks, socials };
