@@ -1,9 +1,8 @@
 import { AboutSection } from "@/components/shared/AboutSection";
-import { ContactSection } from "@/components/shared/ContactSection";
 import { HeroSection } from "@/components/shared/HeroSection";
 import { productsPage } from "@/lib/products-page.data";
 
-export default function ProductsPage() {
+export default function AboutUsPage() {
   return (
     <>
       <HeroSection
@@ -16,7 +15,6 @@ export default function ProductsPage() {
         title={productsPage.title}
         description={productsPage.description}
       />
-      <ContactSection />
     </>
   );
 }
