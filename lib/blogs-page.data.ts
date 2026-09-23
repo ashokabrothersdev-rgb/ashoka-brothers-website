@@ -1,39 +1,73 @@
-interface Blog {
+export interface Blog {
   title: string;
   description: string;
   image: string;
   author: string;
+  authorImage: string;
   date: string;
-  slug: string;
+  href: string;
 }
 
 const blogs: Blog[] = [
   {
-    title: "Blog 1",
+    title: "Screw Technology",
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has electronic typesetting, remaining essentially unchanged Lorem Ipsum has been the industry's standard dummy.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
     image: "/images/product-1.png",
-    author: "John Doe",
-    date: "2026-01-01",
-    slug: "blog-1",
+    author: "Chris Martin",
+    authorImage: "/images/testimonial-1.png",
+    date: "Feb 12, 2025",
+    href: "#",
   },
   {
-    title: "Blog 2",
+    title: "Installation Guides",
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has electronic typesetting, remaining essentially unchanged Lorem Ipsum has been the industry's standard dummy.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
     image: "/images/product-2.png",
-    author: "Jane Doe",
-    date: "2026-01-02",
-    slug: "blog-2",
+    author: "Chris Martin",
+    authorImage: "/images/testimonial-1.png",
+    date: "Feb 12, 2025",
+    href: "#",
   },
   {
-    title: "Blog 3",
+    title: "Application Tips",
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has electronic typesetting, remaining essentially unchanged Lorem Ipsum has been the industry's standard dummy.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+    image: "/images/screw-hero.png",
+    author: "Chris Martin",
+    authorImage: "/images/testimonial-1.png",
+    date: "Feb 12, 2025",
+    href: "#",
+  },
+  {
+    title: "Industry News",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+    image: "/images/product-2.png",
+    author: "Chris Martin",
+    authorImage: "/images/testimonial-1.png",
+    date: "Feb 12, 2025",
+    href: "#",
+  },
+  {
+    title: "Case Studies",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
     image: "/images/product-1.png",
-    author: "John Doe",
-    date: "2026-01-03",
-    slug: "blog-3",
+    author: "Chris Martin",
+    authorImage: "/images/testimonial-1.png",
+    date: "Feb 12, 2025",
+    href: "#",
+  },
+  {
+    title: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+    image: "/images/blog-hero.png",
+    author: "Chris Martin",
+    authorImage: "/images/testimonial-1.png",
+    date: "Feb 12, 2025",
+    href: "#",
   },
 ];
 
@@ -44,5 +78,5 @@ export const blogsPage = {
   isVideo: false,
   imageSrcDesktop: "/images/blog-hero.png",
   imageSrcMobile: "/images/blog-hero-m.png",
-  blogs: blogs,
+  blogs,
 };
