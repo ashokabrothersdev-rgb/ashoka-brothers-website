@@ -33,8 +33,27 @@ const socials = [
     label: "Facebook",
     size: 36,
   },
-  { href: "https://x.com", src: "/icons/Twitter.svg", label: "Twitter", size: 36 },
+  {
+    href: "https://x.com",
+    src: "/icons/Twitter.svg",
+    label: "Twitter",
+    size: 36,
+  },
   { href: "/", src: "/icons/location.svg", label: "Location", size: 36 },
 ];
 
-export { contactLinks, quickLinks, socials };
+interface ContactDetails {
+  address: string;
+  phone1: string;
+  phone2: string;
+  email: string;
+}
+
+const contactDetails: ContactDetails = {
+  address: "Lorem Ipsum Palacicium, Lorem Colosiumimi, Lorem 511411",
+  phone1: "+1234567890",
+  phone2: "+1234567890",
+  email: "ashokabros@yahoo.com",
+};
+
+export { contactLinks, quickLinks, socials, contactDetails };
