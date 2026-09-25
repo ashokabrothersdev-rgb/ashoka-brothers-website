@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { contactLinks, quickLinks, socials } from "@/lib/shared.data";
+import {
+  contactLinks,
+  quickLinks,
+  socials,
+  contactDetails,
+} from "@/lib/shared.data";
 import Image from "next/image";
 
 export function Footer() {
@@ -34,21 +39,24 @@ export function Footer() {
                 <p className="whitespace-nowrap">
                   <span className="text-black">Reservations:</span>{" "}
                   <a
-                    href="tel:9878077972"
+                    href={`tel:${contactDetails.phone1}`}
                     className="underline decoration-[6.5%]"
                   >
-                    98780-77972
+                    {contactDetails.phone1}
                   </a>
                 </p>
                 <p className="whitespace-nowrap">
                   <span className="text-black">Email:</span>{" "}
-                  <a href="mailto:ashokabros@yahoo.com">ashokabros@yahoo.com</a>
+                  <a href={`mailto:${contactDetails.email}`}>
+                    {contactDetails.email}
+                  </a>
                 </p>
                 <p>
-                  <span className="text-black">Address:</span> Lorem Ipsum
-                  Palacicium,
+                  <span className="text-black">Address:</span>{" "}
+                  {contactDetails.address.split(",")[0]},
                   <br />
-                  Lorem Colosiumimi, Lorem 511411
+                  {contactDetails.address.split(",")[1]},
+                  {contactDetails.address.split(",")[2]}
                 </p>
               </div>
             </div>

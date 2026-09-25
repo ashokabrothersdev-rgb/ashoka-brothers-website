@@ -1,26 +1,23 @@
 export const links = [
-  { href: "#home", label: "Home" },
-  { href: "#our-story", label: "Our Story" },
-  { href: "#products", label: "Products" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#career", label: "Career" },
-  { href: "#contact", label: "Contact Us" },
+  { href: "/", label: "Home" },
+  { href: "/about-us", label: "Our Story" },
+  { href: "/products", label: "Products" },
+  { href: "/blogs", label: "Blogs" },
+  { href: "/contact-us", label: "Contact Us" },
 ];
 
 const contactLinks = [
-  { href: "#our-story", label: "About Us" },
-  { href: "#testimonials", label: "Blogs" },
-  { href: "#contact", label: "FAQs" },
-  { href: "#contact", label: "Policies" },
-  { href: "#our-story", label: "Why Choose Us" },
+  { href: "/about-us", label: "About Us" },
+  { href: "/blogs", label: "Blogs" },
+  { href: "/faqs", label: "FAQs" },
+  { href: "/policies", label: "Policies" },
 ];
 
 const quickLinks = [
-  { href: "#contact", label: "Contact Us" },
-  { href: "#our-story", label: "About Us" },
-  { href: "#career", label: "Careers" },
-  { href: "#contact", label: "Location" },
-  { href: "#contact", label: "Term & Conditions" },
+  { href: "/contact-us", label: "Contact Us" },
+  { href: "/about-us", label: "About Us" },
+  { href: "/career", label: "Careers" },
+  { href: "/location", label: "Location" },
 ];
 
 const socials = [
@@ -36,8 +33,27 @@ const socials = [
     label: "Facebook",
     size: 36,
   },
-  { href: "https://x.com", src: "/icons/Twitter.svg", label: "Twitter", size: 36 },
-  { href: "#contact", src: "/icons/location.svg", label: "Location", size: 36 },
+  {
+    href: "https://x.com",
+    src: "/icons/Twitter.svg",
+    label: "Twitter",
+    size: 36,
+  },
+  { href: "/", src: "/icons/location.svg", label: "Location", size: 36 },
 ];
 
-export { contactLinks, quickLinks, socials };
+interface ContactDetails {
+  address: string;
+  phone1: string;
+  phone2: string;
+  email: string;
+}
+
+const contactDetails: ContactDetails = {
+  address: "Lorem Ipsum Palacicium, Lorem Colosiumimi, Lorem 511411",
+  phone1: "+1234567890",
+  phone2: "+1234567890",
+  email: "ashokabros@yahoo.com",
+};
+
+export { contactLinks, quickLinks, socials, contactDetails };

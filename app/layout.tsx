@@ -23,7 +23,10 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Ashoka Brothers",
+  title: {
+    default: "Ashoka Brothers",
+    template: "%s - Ashoka Brothers",
+  },
   description:
     "Ashoka Brothers manufactures precision screws, bolts, nuts, and hooks with clean threads and a firm hold.",
 };

@@ -4,30 +4,31 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { links } from "@/lib/shared.data";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex h-22.5 max-w-384 items-center justify-between px-5 sm:px-10 lg:px-15">
-        <Link href="#home" className="relative z-10 shrink-0">
-          <Image
-            src="/icons/logo.svg"
-            alt="Ashoka Brothers"
-            width={275}
-            height={64}
-            className="h-10 w-auto sm:h-12 lg:h-16"
-            loading="eager"
-          />
-        </Link>
+        <Image
+          src="/icons/logo.svg"
+          alt="Ashoka Brothers"
+          width={275}
+          height={64}
+          className="h-10 w-auto sm:h-12 lg:h-16"
+          loading="eager"
+        />
 
         <nav className="hidden items-center gap-6 xl:gap-8 2xl:gap-10 lg:flex">
           {links.map((link) => (
             <Link
               key={`${link.href}-${link.label}`}
               href={link.href}
-              className="font-sans text-[13px] font-semibold uppercase leading-3.25 tracking-[0.65px] text-white transition-opacity hover:opacity-70"
+              className={`font-sans text-[13px] font-semibold uppercase leading-3.25 pb-2 tracking-[0.65px] text-white transition-opacity hover:opacity-70 
+                ${pathname === link.href ? "border-b-[0.5px] border-white" : ""}`}
             >
               {link.label}
             </Link>
