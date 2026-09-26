@@ -8,7 +8,7 @@ import { ProductCatalogSection } from "@/components/home/ProductCatalogSection";
 import { RangeOfProductsSection } from "@/components/home/RangeOfProductsSection";
 import { StatsSection } from "@/components/home/StatsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { aboutSection, heroSection } from "@/lib/home-page.data";
+import { aboutSection, heroSection } from "@/data/home-page.data";
 
 export default function Home() {
   return (

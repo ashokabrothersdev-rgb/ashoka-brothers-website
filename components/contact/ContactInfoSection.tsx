@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ScrewMark } from "@/components/shared/ScrewMark";
-import { contactDetails } from "@/lib/shared.data";
+import { contactDetails } from "@/data/shared.data";
 
 const textClass =
   "font-canela text-[14px] leading-6 text-[#d0d0d0] sm:text-[16px] sm:leading-7 text-balance";

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { type Blog } from "@/lib/blogs-page.data";
+import { type Blog } from "@/data/blogs-page.data";
 
 export function BlogCard({ blog }: { blog: Blog }) {
   return (

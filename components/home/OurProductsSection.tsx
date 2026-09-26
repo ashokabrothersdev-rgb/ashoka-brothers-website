@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { ReadMoreButton } from "@/components/shared/ReadMoreButton";
 import { ScrewMark } from "@/components/shared/ScrewMark";
-import { products } from "@/lib/home-page.data";
+import { products } from "@/data/home-page.data";
 
 const SIDE_W = 120;
 const CENTER_W = 600;

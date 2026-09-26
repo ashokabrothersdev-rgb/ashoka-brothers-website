@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ScrewMark } from "@/components/shared/ScrewMark";
-import { productCatalog } from "@/lib/home-page.data";
+import { productCatalog } from "@/data/home-page.data";
 
 export function ProductCatalogSection() {
   return (

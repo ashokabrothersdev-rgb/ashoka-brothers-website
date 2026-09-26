@@ -1,4 +1,4 @@
-import { categories } from "@/lib/home-page.data";
+import { categories } from "@/data/home-page.data";
 import Image from "next/image";
 
 export function RangeOfProductsSection() {

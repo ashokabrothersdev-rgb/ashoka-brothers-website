@@ -1,7 +1,7 @@
 import { BlogsSection } from "@/components/blogs/BlogsSection";
 import { AboutSection } from "@/components/shared/AboutSection";
 import { HeroSection } from "@/components/shared/HeroSection";
-import { blogsPage } from "@/lib/blogs-page.data";
+import { blogsPage } from "@/data/blogs-page.data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

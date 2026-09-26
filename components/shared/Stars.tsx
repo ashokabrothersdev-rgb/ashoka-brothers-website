@@ -1,4 +1,4 @@
-import { Testimonial } from "@/lib/home-page.data";
+import { Testimonial } from "@/data/home-page.data";
 import Image from "next/image";
 
 function Stars() {

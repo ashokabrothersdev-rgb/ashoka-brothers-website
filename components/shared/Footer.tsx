@@ -4,7 +4,7 @@ import {
   quickLinks,
   socials,
   contactDetails,
-} from "@/lib/shared.data";
+} from "@/data/shared.data";
 import Image from "next/image";
 
 export function Footer() {

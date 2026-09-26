@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { links } from "@/lib/shared.data";
+import { links } from "@/data/shared.data";
 import { usePathname } from "next/navigation";
 
 export function Navbar() {
