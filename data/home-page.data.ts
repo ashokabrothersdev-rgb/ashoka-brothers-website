@@ -7,21 +7,27 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Lorem delivered beyond our expectations. The quality of construction and attention to detail is remarkable. Our family is extremely happy with our new home. Lorem beyond",
-    name: "Rakesh Roshan",
-    role: "Lorem Ipsum",
+      "The product quality has been consistently good, with the right finish and reliable performance. Ashoka Brothers - a dependable choice for our regular hardware requirements",
+    name: "Rajiv Mehta",
+    role: "Business Owner",
   },
   {
     quote:
-      "Lorem delivered beyond our expectations. The quality of construction and attention to detail is remarkable. Our family is extremely happy with our new home. Lorem beyond",
-    name: "Rakesh Roshan",
-    role: "Lorem Ipsum",
+      "We’ve been sourcing our fastening requirements from Ashoka Brothers and have always found the products reliable. Good quality, good range, and consistent service",
+    name: "Amit Sharma",
+    role: "Contractor",
   },
   {
     quote:
-      "Lorem delivered beyond our expectations. The quality of construction and attention to detail is remarkable. Our family is extremely happy with our new home. Lorem beyond",
-    name: "Rakesh Roshan",
-    role: "Lorem Ipsum",
+      "What stands out is the consistency in quality. The screws and fasteners have a good finish and hold well across different applications. Always a reliable experience",
+    name: "Vikram Patel",
+    role: "Hardware Dealer",
+  },
+  {
+    quote:
+      "Ashoka Brothers offers a good range of hardware for our day-to-day requirements. The products are dependable, and their service makes the overall experience smooth",
+    name: "Suresh Kumar",
+    role: "Business Owner",
   },
 ];
 
@@ -41,22 +47,20 @@ export const products = [
 ];
 
 export const stats = [
-  { value: 150, suffix: "%", label: "Return on Investment" },
-  { value: 90, suffix: "%", label: "Repeat Clients" },
-  { value: 600, suffix: "K", label: "Lives Positively Impacted" },
+  { value: 25, suffix: "+", label: "Product Varities" },
+  { value: 4, suffix: "", label: "Core Categories" },
+  { value: 100, suffix: "%", label: "Focus on Quality" },
 ];
 
 export const productCatalog = [
-  "Flange Head self driving screws",
-  "CSK Head self Driving screws",
-  "pan head self driving screws",
-  "truss head self drilling screws",
-  "SS CSK head sheet metal screw",
-  "SS star head sheet metal scew",
-  "SS shaved head wood screw",
-  "chip board screw lorem ipsum",
-  "CSK head sheet metal screw",
-  "Shaved wood head screws",
+  "Carraigebolt",
+  "Chipboard Screw",
+  "CSK Philips Self Tapping Screw",
+  "CSK Slotted Self Tapping Screw",
+  "Golden Polish Machine Screw",
+  "Pure Brass Wood Screw",
+  "Philips Head Wood Screw",
+  "Drywall Screw",
 ];
 
 export const categories = [
@@ -137,7 +141,7 @@ export const icons: DriveIcon[] = [
 export const aboutSection = {
   title: "Ashoka Brothers",
   description:
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has electronic typesetting, remaining essentially unchanged Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "The right hardware makes all the difference. Ashoka Brothers brings together a dependable range of screws, bolts, nuts, hooks and fastening solutions built for everyday applications. From a clean finish to a firm hold, we focus on hardware that performs when it matters. With a focus on quality, consistency and reliable performance, we provide fastening solutions made to meet the demands of every project, big or small.",
 };
 
 export const heroSection = {

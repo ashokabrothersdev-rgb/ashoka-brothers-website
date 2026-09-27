@@ -8,20 +8,28 @@ export function ProductCatalogSection() {
       id="career"
       className="grid min-h-130 lg:min-h-158.5 lg:grid-cols-2"
     >
-      <div className="relative bg-[#ebc534] px-8 py-12 sm:px-16 lg:px-22.5 lg:py-22.5 flex flex-col items-center justify-center">
+      <div className="relative flex items-center max-sm:text-center justify-center bg-[#ebc534] px-8 py-12 sm:px-16 lg:px-22.5 lg:py-22.5">
         <ScrewMark className="absolute top-7.5 left-7.5 rotate-45" size={17} />
         <ScrewMark className="absolute top-7.5 right-7.5 rotate-45" size={17} />
-        <ScrewMark className="absolute bottom-7.5 left-7.5 rotate-45" size={17} />
-        <ScrewMark className="absolute right-7.5 bottom-7.5 rotate-45" size={17} />
+        <ScrewMark
+          className="absolute bottom-7.5 left-7.5 rotate-45"
+          size={17}
+        />
+        <ScrewMark
+          className="absolute right-7.5 bottom-7.5 rotate-45"
+          size={17}
+        />
 
-        <h2 className="font-canela text-[28px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px] ">
-          Products
-        </h2>
-        <ul className="sm:mt-7.5 mt-5 font-canela text-[16px] leading-10 tracking-[0.9px] text-[#282828]">
-          {productCatalog.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <div>
+          <h2 className="font-canela text-[28px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px]">
+            Products
+          </h2>
+          <ul className="mt-5 font-canela text-[16px] leading-10 tracking-[0.9px] text-[#282828] sm:mt-7.5 sm:text-[18px]">
+            {productCatalog.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div className="relative min-h-90 lg:min-h-158.5">

@@ -30,7 +30,7 @@ export function Footer() {
         </Link>
 
         <div className="mt-6 grid overflow-hidden bg-white lg:grid-cols-[1fr_480px]">
-          <div className="grid gap-20 px-6 py-10 sm:grid-cols-2 sm:gap-x-32 sm:px-10 lg:grid-cols-[max-content_1fr_1fr] lg:gap-x-40 lg:px-20 lg:py-16">
+          <div className="grid gap-20 px-6 py-10 sm:grid-cols-2 sm:gap-x-32 sm:px-10 lg:grid-cols-[2.5fr_1.5fr_1.5fr] lg:gap-x-30 lg:px-20 lg:py-16">
             <div>
               <h3 className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]">
                 Contact Us
@@ -52,11 +52,10 @@ export function Footer() {
                   </a>
                 </p>
                 <p>
-                  <span className="text-black">Address:</span>{" "}
-                  {contactDetails.address.split(",")[0]},
+                  <span className="text-black">Address:</span> 300/6, Loha
+                  Mandi, Near
                   <br />
-                  {contactDetails.address.split(",")[1]},
-                  {contactDetails.address.split(",")[2]}
+                  Tunda Talab, Amritsar- 143001
                 </p>
               </div>
             </div>

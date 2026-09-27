@@ -93,7 +93,7 @@ export function OurProductsSection() {
       id="products"
       className="relative overflow-hidden bg-black py-12.5 lg:py-30"
     >
-      <div className="mx-auto flex max-w-384 flex-col-reverse items-center gap-12 px-5 sm:px-10 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(280px,420px)] lg:gap-14 lg:px-20">
+      <div className="mx-auto flex max-w-384 flex-col-reverse items-center gap-12 px-5 sm:px-10 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(280px,470px)] lg:gap-14 lg:px-20">
         <div className="w-[calc(100%+2.5rem)] -mx-5 sm:w-[calc(100%+5rem)] sm:-mx-10 lg:mx-0 lg:w-full">
           <div
             className="relative flex items-center justify-center gap-3 overflow-hidden"
@@ -272,12 +272,13 @@ export function OurProductsSection() {
             />
           </h2>
           <p className="mt-4 font-canela text-[14px] leading-7 sm:mt-7.5 sm:text-[16px] sm:leading-8.5">
-            Lorem Ipsum has been the industry&apos;s standard dummy text ever
-            since the 1500s, when an unknown printer took a galley type and
-            scrambled it to make a type specimen book.
+            From precision screws and dependable bolts to nuts, hooks and
+            fastening essentials, Ashoka Brothers offers a reliable range built
+            for secure performance, consistent quality and lasting results
+            across every project.
           </p>
           <div className="mt-8">
-            <ReadMoreButton href="#range" />
+            <ReadMoreButton href="#range" text="Explore Products" />
           </div>
         </div>
       </div>
