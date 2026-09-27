@@ -111,13 +111,13 @@ export const icons: DriveIcon[] = [
     alt: "Nuts and bolts",
     className: "w-[100px] sm:w-[118px] lg:w-[126px]",
     title: {
-      first: "Our Bolts",
-      second: "Lock it Tight",
+      first: "Bolts and Nuts",
+      second: "Hold it Together",
     },
     description: {
-      first: "Precision Fit.",
+      first: "Precision Threads.",
       second: "Solid Grip.",
-      third: "Built Tough.",
+      third: "Build to stay.",
     },
   },
   {
@@ -127,13 +127,13 @@ export const icons: DriveIcon[] = [
     alt: "Hooks",
     className: "w-[108px] sm:w-[122px] lg:w-[133px]",
     title: {
-      first: "Our Hooks",
-      second: "Hang it Strong",
+      first: "Premium Hooks",
+      second: "Hang it Right",
     },
     description: {
-      first: "Heavy Duty.",
-      second: "Sure Catch.",
-      third: "Made to Last.",
+      first: "Strong Hold.",
+      second: "Simple Form.",
+      third: "Ready for Work.",
     },
   },
 ];
