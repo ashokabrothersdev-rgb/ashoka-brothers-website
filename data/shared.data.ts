@@ -51,8 +51,8 @@ interface ContactDetails {
 
 const contactDetails: ContactDetails = {
   address: "300/6, Loha Mandi, Near Tunda Talab, Amritsar- 143001",
-  phone1: "98780-77972",
-  phone2: "+1234567890",
+  phone1: "98780 77972",
+  phone2: "93561 04499",
   email: "ashokabros@yahoo.com",
 };
 

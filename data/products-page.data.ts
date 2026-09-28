@@ -59,9 +59,9 @@ export const productCards: ProductCard[] = [
 ];
 
 export const productsPage = {
-  title: "Products",
+  title: "Our Products",
   description:
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has electronic typesetting, remaining essentially unchanged Lorem Ipsum has been the industry's standard dummy.",
+    "Explore our range of quality screws, bolts, nuts and hooks, designed to deliver a secure fit, dependable performance and lasting reliability across a wide range of applications. From everyday fastening needs to demanding projects, our products are built to deliver a firm and reliable hold.",
   isVideo: false,
   imageSrcDesktop: "/images/screw-hero.png",
   imageSrcMobile: "/images/screw-hero-m.png",

@@ -12,9 +12,9 @@ const blogs: Blog[] = [
   {
     title: "Screw Technology",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      "Understanding Screw Technology - Explore the basics of screw design, thread types and materials..",
     image: "/images/product-1.png",
-    author: "Chris Martin",
+    author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
     href: "#",
@@ -22,9 +22,9 @@ const blogs: Blog[] = [
   {
     title: "Installation Guides",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      "A Guide to Better Installation - Learn the essential practices for selecting, positioning and installing..",
     image: "/images/product-2.png",
-    author: "Chris Martin",
+    author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
     href: "#",
@@ -32,9 +32,9 @@ const blogs: Blog[] = [
   {
     title: "Application Tips",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      "Choosing the Right Fastener for the Job - Different materials and applications demand different..",
     image: "/images/screw-hero.png",
-    author: "Chris Martin",
+    author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
     href: "#",
@@ -42,9 +42,9 @@ const blogs: Blog[] = [
   {
     title: "Industry News",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      "What’s Changing in the Hardware Industry - Stay updated on emerging trends, evolving fastening..",
     image: "/images/product-2.png",
-    author: "Chris Martin",
+    author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
     href: "#",
@@ -52,19 +52,19 @@ const blogs: Blog[] = [
   {
     title: "Case Studies",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      "When the Right Fastener Matters - Take a closer look at real-world applications and discover how the right..",
     image: "/images/product-1.png",
-    author: "Chris Martin",
+    author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
     href: "#",
   },
   {
-    title: "Lorem Ipsum",
+    title: "Product InsightsProduct Insights",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      "Understanding Hardware Before You Buy - A closer look at screws, bolts, nuts and hooks, helping you..",
     image: "/images/blog-hero.png",
-    author: "Chris Martin",
+    author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
     href: "#",
@@ -74,8 +74,7 @@ const blogs: Blog[] = [
 export const blogsPage = {
   title: "Blogs - Ashoka Brothers",
   description:
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has electronic typesetting, remaining essentially unchanged Lorem Ipsum has been the industry's standard dummy.",
-  isVideo: false,
+    "Explore practical insights, product knowledge and industry updates from Ashoka Brothers. From choosing the right fastener to understanding applications and installation, discover useful information to make every project more efficient and reliable ",
   imageSrcDesktop: "/images/blog-hero.png",
   imageSrcMobile: "/images/blog-hero-m.png",
   blogs,

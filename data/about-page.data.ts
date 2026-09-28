@@ -30,23 +30,23 @@ const carouselData: AboutCarouselItem[] = [
   {
     src: "/images/about-2.png",
     alt: "Carousel 1",
-    title: "Quality Assurance",
-    badge: "Quality",
-    description: "We ensure that all our products are of the highest quality.",
+    title: "Professionalism",
+    badge: "CORE VALUES",
+    description: "We believe in doing things the right way, with clear communication, dependable service and attention to every detail. Professionalism guides how we work and how we build lasting business relationships",
   },
   {
     src: "/images/about-2.png",
     alt: "Carousel 2",
-    title: "Customer Satisfaction",
-    badge: "Customer",
-    description: "We ensure that all our products are of the highest quality.",
+    title: "Customer First",
+    badge: "CORE VALUES",
+    description: "We prioritize customer needs and satisfaction above all else. Our goal is to provide personalized service, build trust, and exceed expectations through every interaction.",
   },
   {
     src: "/images/about-2.png",
     alt: "Carousel 3",
-    title: "Customer Satisfaction",
-    badge: "Customer",
-    description: "We ensure that all our products are of the highest quality.",
+    title: "Quality Focused",
+    badge: "CORE VALUES",
+    description: "Quality is at the heart of every product we offer. From material and finish to performance and consistency, we focus on hardware that delivers a secure hold and dependable results",
   },
   {
     src: "/images/about-2.png",
@@ -70,13 +70,13 @@ const MOBILE_CARD_HEIGHT = 560;
 export const aboutPage = {
   title: "About Ashoka Brothers",
   description:
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has electronic typesetting, remaining essentially unchanged Lorem Ipsum has been the industry's standard dummy.",
+    "Ashoka Brothers is committed to providing dependable hardware solutions that combine quality, precision and lasting performance. With a focused range of screws, bolts, nuts and hooks, we aim to make every fastening requirement simpler, more reliable and built to last",
   isVideo: false,
   imageSrcDesktop: "/images/screw-hero.png",
   imageSrcMobile: "/images/screw-hero-m.png",
   visionTitle: "Our Vision",
   visionDescription:
-    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has",
+    "To be a trusted name in hardware, delivering reliable fastening solutions with consistent quality and lasting performance for every customer, every project, and every requirement",
   visionImages,
   carouselData,
   EASE,
