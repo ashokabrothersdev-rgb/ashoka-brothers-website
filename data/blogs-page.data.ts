@@ -60,7 +60,7 @@ const blogs: Blog[] = [
     href: "#",
   },
   {
-    title: "Product InsightsProduct Insights",
+    title: "Product Insights",
     description:
       "Understanding Hardware Before You Buy - A closer look at screws, bolts, nuts and hooks, helping you..",
     image: "/images/blog-hero.png",
