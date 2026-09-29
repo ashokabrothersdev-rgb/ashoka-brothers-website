@@ -81,15 +81,15 @@ export function VisionSection({
           >
             {title}
             <ScrewMark
-              className="mt-2 shrink-0 opacity-50 invert sm:mt-4"
+              className="mt-2 shrink-0 opacity-30 invert sm:mt-4"
               size={13}
             />
           </h2>
-          <p className="mt-6 max-w-md font-canela text-[14px] leading-7 text-white/80 sm:mt-8 sm:text-[17px] sm:leading-8">
+          <p className="mt-6 max-w-md font-canela text-balance text-[14px] leading-7 text-white/80 sm:mt-8 sm:text-[17px] sm:leading-8">
             {description}
           </p>
           <div className="mt-8 sm:mt-10">
-            <ReadMoreButton href="#core-values" />
+            <ReadMoreButton href="#core-values" text="Read More" />
           </div>
         </motion.div>
 

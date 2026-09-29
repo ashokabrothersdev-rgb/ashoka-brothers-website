@@ -34,7 +34,7 @@ export function ProductCatalogSection() {
 
       <div className="relative min-h-90 lg:min-h-158.5">
         <Image
-          src="/images/product-1.png"
+          src="/images/products/product-1.png"
           alt="Close-up of a precision screw"
           fill
           className="object-cover"
