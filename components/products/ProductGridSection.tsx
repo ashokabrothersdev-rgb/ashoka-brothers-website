@@ -33,7 +33,7 @@ type ProductCardProps = {
 
 function ProductCard({ product, index }: ProductCardProps) {
   const onLightMobile = index >= 1;
-  const onLightFromSm = index >= 3;
+  const onLightFromSm = index >= 27;
   const categoryTone = onLightFromSm
     ? "text-[#a8906a]"
     : onLightMobile
