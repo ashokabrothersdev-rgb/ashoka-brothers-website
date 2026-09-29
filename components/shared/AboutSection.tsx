@@ -9,8 +9,8 @@ interface AboutSectionProps {
 export function AboutSection({ title, description }: AboutSectionProps) {
   return (
     <section id="our-story" className="py-20 lg:py-25">
-      <div className="mx-auto max-w-250 px-5 text-center">
-        <div className="mb-6 flex items-center justify-center gap-7.5">
+      <div className="mx-auto max-w-300 px-5 text-center">
+        <div className="mb-7.5 flex items-center justify-center gap-7.5">
           <ScrewMark size={13} className="sm:mt-4" />
           <h2 className="font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]">
             {title}
@@ -22,8 +22,8 @@ export function AboutSection({ title, description }: AboutSectionProps) {
           {description}
         </p>
 
-        <div className="mt-10 flex justify-center">
-          <ReadMoreButton href="#products" />
+        <div className="mt-7.5 flex justify-center">
+          <ReadMoreButton href="#products" text="Our Story" />
         </div>
       </div>
     </section>

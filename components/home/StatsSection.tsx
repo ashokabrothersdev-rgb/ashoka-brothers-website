@@ -1,5 +1,5 @@
 import { CountAnimation } from "@/components/shared/CountAnimation";
-import { stats } from "@/lib/home-page.data";
+import { stats } from "@/data/home-page.data";
 
 export function StatsSection() {
   return (

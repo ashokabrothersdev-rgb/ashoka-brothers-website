@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { productCards, type ProductCard } from "@/lib/products-page.data";
+import { productCards, type ProductCard } from "@/data/products-page.data";
 
 export function ProductGridSection() {
   return (

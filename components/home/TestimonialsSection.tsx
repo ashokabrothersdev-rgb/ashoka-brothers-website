@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { testimonials } from "@/lib/home-page.data";
+import { testimonials } from "@/data/home-page.data";
 import { TestimonialCard } from "@/components/shared/Stars";
 
 export function TestimonialsSection() {

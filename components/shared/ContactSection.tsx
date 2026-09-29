@@ -45,13 +45,9 @@ export function ContactSection() {
 
       <div className="relative mx-auto flex min-h-160 max-w-384 items-center justify-end px-5 py-16 sm:px-10 lg:min-h-200 lg:px-20">
         <div className="w-full max-w-100 border-t border-l border-white bg-[#ffffff]/5 p-10 shadow-[inset_-4.5px_-4.5px_1.5px_-5.25px_rgba(255,255,255,0.5),inset_4.5px_4.5px_1.5px_-5.25px_rgba(255,255,255,0.5)] backdrop-blur-[18px]">
-          <p className="font-sans text-[14px] leading-4.25 tracking-[0.7px] text-white uppercase">
-            Connect
-          </p>
-          <h2 className="mt-2 font-canela text-[28px] leading-12.5 tracking-[2px] text-white uppercase sm:text-[38px] sm:leading-15">
+          <h2 className="font-canela text-[28px] leading-12.5 tracking-[2px] text-white uppercase sm:text-[38px] sm:leading-15">
             Get in Touch
           </h2>
-          <div className="mt-4 h-0.75 w-15 bg-white" />
 
           <form className="mt-8 flex flex-col gap-6" onSubmit={handleSubmit}>
             <label className="flex w-full flex-col gap-1.5">

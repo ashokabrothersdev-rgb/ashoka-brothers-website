@@ -1,7 +1,7 @@
 import { ContactInfoSection } from "@/components/contact/ContactInfoSection";
 import { ContactSection } from "@/components/shared/ContactSection";
 import { HeroSection } from "@/components/shared/HeroSection";
-import { contactPage } from "@/lib/contact-page.data";
+import { contactPage } from "@/data/contact-page.data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

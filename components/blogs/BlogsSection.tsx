@@ -1,4 +1,4 @@
-import { blogsPage } from "@/lib/blogs-page.data";
+import { blogsPage } from "@/data/blogs-page.data";
 import { BlogCard } from "./BlogCard";
 
 export function BlogsSection() {

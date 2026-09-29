@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import { useRef, useState } from "react";
 import { ScrewMark } from "@/components/shared/ScrewMark";
-import { icons } from "@/lib/home-page.data";
+import { icons } from "@/data/home-page.data";
 
 const INACTIVE_OPACITY = 0.28;
 const ACTIVE_OPACITY = 1;

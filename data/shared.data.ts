@@ -7,17 +7,17 @@ export const links = [
 ];
 
 const contactLinks = [
-  { href: "/about-us", label: "About Us" },
-  { href: "/blogs", label: "Blogs" },
-  { href: "/faqs", label: "FAQs" },
-  { href: "/policies", label: "Policies" },
+  { href: "/", label: "Home" },
+  { href: "/products", label: "Our Products" },
+  { href: "/about-us", label: "Our Story" },
+  { href: "/location", label: "Location" },
 ];
 
 const quickLinks = [
+  { href: "/blogs", label: "Blogs" },
+  { href: "/media", label: "Media" },
   { href: "/contact-us", label: "Contact Us" },
-  { href: "/about-us", label: "About Us" },
-  { href: "/career", label: "Careers" },
-  { href: "/location", label: "Location" },
+  { href: "/terms-and-conditions", label: "Terms & Conditions" },
 ];
 
 const socials = [
@@ -50,9 +50,9 @@ interface ContactDetails {
 }
 
 const contactDetails: ContactDetails = {
-  address: "Lorem Ipsum Palacicium, Lorem Colosiumimi, Lorem 511411",
-  phone1: "+1234567890",
-  phone2: "+1234567890",
+  address: "300/6, Loha Mandi, Near Tunda Talab, Amritsar- 143001",
+  phone1: "98780 77972",
+  phone2: "93561 04499",
   email: "ashokabros@yahoo.com",
 };
 
