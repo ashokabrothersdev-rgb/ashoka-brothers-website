@@ -13,7 +13,7 @@ const blogs: Blog[] = [
     title: "Screw Technology",
     description:
       "Understanding Screw Technology - Explore the basics of screw design, thread types and materials..",
-    image: "/images/product-1.png",
+    image: "/images/products/product-1.png",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -23,7 +23,7 @@ const blogs: Blog[] = [
     title: "Installation Guides",
     description:
       "A Guide to Better Installation - Learn the essential practices for selecting, positioning and installing..",
-    image: "/images/product-2.png",
+    image: "/images/products/product-2.png",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -77,5 +77,6 @@ export const blogsPage = {
     "Explore practical insights, product knowledge and industry updates from Ashoka Brothers. From choosing the right fastener to understanding applications and installation, discover useful information to make every project more efficient and reliable ",
   imageSrcDesktop: "/images/blog-hero.png",
   imageSrcMobile: "/images/blog-hero-m.png",
+  isVideo: false,
   blogs,
 };

@@ -4,9 +4,10 @@ import { ScrewMark } from "@/components/shared/ScrewMark";
 interface AboutSectionProps {
   title: string;
   description: string;
+  buttonText?: string;
 }
 
-export function AboutSection({ title, description }: AboutSectionProps) {
+export function AboutSection({ title, description, buttonText = "Read More" }: AboutSectionProps) {
   return (
     <section id="our-story" className="py-20 lg:py-25">
       <div className="mx-auto max-w-300 px-5 text-center">
@@ -23,7 +24,7 @@ export function AboutSection({ title, description }: AboutSectionProps) {
         </p>
 
         <div className="mt-7.5 flex justify-center">
-          <ReadMoreButton href="#products" text="Our Story" />
+          <ReadMoreButton href="#products" text={buttonText} />
         </div>
       </div>
     </section>
