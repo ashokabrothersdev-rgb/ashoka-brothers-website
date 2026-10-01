@@ -30,7 +30,7 @@ export function Footer() {
         </Link>
 
         <div className="mt-6 grid overflow-hidden bg-white lg:grid-cols-[1fr_480px]">
-          <div className="grid gap-20 px-6 py-10 sm:grid-cols-2 sm:gap-x-32 sm:px-10 lg:grid-cols-[2.5fr_1.5fr_1.5fr] lg:gap-x-30 lg:px-20 lg:py-16">
+          <div className="grid gap-10 px-6 py-10 sm:grid-cols-2 sm:gap-x-32 sm:px-10 lg:grid-cols-[2.5fr_1.5fr_1.5fr] lg:gap-x-30 lg:px-20 lg:py-16">
             <div>
               <h3 className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]">
                 Contact Us

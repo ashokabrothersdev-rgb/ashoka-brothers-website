@@ -33,7 +33,7 @@ export function ContactSection() {
       className="relative min-h-160 overflow-hidden lg:min-h-200"
     >
       <Image
-        src="/images/form-bg.png"
+        src="/images/form-bg.webp"
         alt="Contact Form Background"
         fill
         className="object-center"

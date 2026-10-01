@@ -5,9 +5,15 @@ interface AboutSectionProps {
   title: string;
   description: string;
   buttonText?: string;
+  buttonHref?: string;
 }
 
-export function AboutSection({ title, description, buttonText = "Read More" }: AboutSectionProps) {
+export function AboutSection({
+  title,
+  description,
+  buttonText = "Read More",
+  buttonHref,
+}: AboutSectionProps) {
   return (
     <section id="our-story" className="py-20 lg:py-25">
       <div className="mx-auto max-w-300 px-5 text-center">
@@ -24,7 +30,7 @@ export function AboutSection({ title, description, buttonText = "Read More" }: A
         </p>
 
         <div className="mt-7.5 flex justify-center">
-          <ReadMoreButton href="#products" text={buttonText} />
+          <ReadMoreButton href={buttonHref} text={buttonText} />
         </div>
       </div>
     </section>
