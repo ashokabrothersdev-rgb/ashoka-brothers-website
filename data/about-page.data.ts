@@ -28,28 +28,28 @@ const visionImages: VisionImage[] = [
 
 const carouselData: AboutCarouselItem[] = [
   {
-    src: "/images/about/about-2.png",
+    src: "/images/about/about-2.webp",
     alt: "Carousel 1",
     title: "Professionalism",
     badge: "CORE VALUES",
     description: "We believe in doing things the right way, with clear communication, dependable service and attention to every detail. Professionalism guides how we work and how we build lasting business relationships",
   },
   {
-    src: "/images/about/about-3.png",
+    src: "/images/about/about-3.webp",
     alt: "Carousel 2",
     title: "Customer First",
     badge: "CORE VALUES",
     description: "We prioritize customer needs and satisfaction above all else. Our goal is to provide personalized service, build trust, and exceed expectations through every interaction.",
   },
   {
-    src: "/images/about/about-4.png",
+    src: "/images/about/about-4.webp",
     alt: "Carousel 3",
     title: "Quality Focused",
     badge: "CORE VALUES",
     description: "Quality is at the heart of every product we offer. From material and finish to performance and consistency, we focus on hardware that delivers a secure hold and dependable results",
   },
   {
-    src: "/images/about/about-2.png",
+    src: "/images/about/about-2.webp",
     alt: "Carousel 4",
     title: "Timely Delivery",
     badge: "Delivery",

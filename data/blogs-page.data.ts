@@ -63,7 +63,7 @@ const blogs: Blog[] = [
     title: "Product Insights",
     description:
       "Understanding Hardware Before You Buy - A closer look at screws, bolts, nuts and hooks, helping you..",
-    image: "/images/blog-hero.png",
+    image: "/images/blog-hero.webp",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -75,7 +75,7 @@ export const blogsPage = {
   title: "Blogs - Ashoka Brothers",
   description:
     "Explore practical insights, product knowledge and industry updates from Ashoka Brothers. From choosing the right fastener to understanding applications and installation, discover useful information to make every project more efficient and reliable ",
-  imageSrcDesktop: "/images/blog-hero.png",
+  imageSrcDesktop: "/images/blog-hero.webp",
   imageSrcMobile: "/images/blog-hero-m.webp",
   isVideo: false,
   blogs,
