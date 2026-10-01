@@ -33,7 +33,7 @@ const blogs: Blog[] = [
     title: "Application Tips",
     description:
       "Choosing the Right Fastener for the Job - Different materials and applications demand different..",
-    image: "/images/screw-hero.png",
+    image: "/images/screw-hero.webp",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -76,7 +76,7 @@ export const blogsPage = {
   description:
     "Explore practical insights, product knowledge and industry updates from Ashoka Brothers. From choosing the right fastener to understanding applications and installation, discover useful information to make every project more efficient and reliable ",
   imageSrcDesktop: "/images/blog-hero.png",
-  imageSrcMobile: "/images/blog-hero-m.png",
+  imageSrcMobile: "/images/blog-hero-m.webp",
   isVideo: false,
   blogs,
 };

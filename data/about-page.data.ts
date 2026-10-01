@@ -72,8 +72,8 @@ export const aboutPage = {
   description:
     "Ashoka Brothers is committed to providing dependable hardware solutions that combine quality, precision and lasting performance. With a focused range of screws, bolts, nuts and hooks, we aim to make every fastening requirement simpler, more reliable and built to last",
   isVideo: false,
-  imageSrcDesktop: "/images/screw-hero.png",
-  imageSrcMobile: "/images/screw-hero-m.png",
+  imageSrcDesktop: "/images/screw-hero.webp",
+  imageSrcMobile: "/images/screw-hero-m.webp",
   visionTitle: "Our Vision",
   visionDescription:
     "To be a trusted name in hardware, delivering reliable fastening solutions with consistent quality and lasting performance for every customer, every project, and every requirement",

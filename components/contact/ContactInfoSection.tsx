@@ -21,7 +21,7 @@ export function ContactInfoSection() {
           <div className="flex h-full flex-col items-center justify-center gap-8 p-5 sm:p-8 lg:flex-row lg:justify-start lg:gap-15 lg:p-0 lg:pr-15 ">
             <div className="relative h-40 w-67.5 shrink-0 overflow-hidden lg:-ml-20 lg:h-125 lg:w-216 max-md:-mt-20">
               <Image
-                src="/images/table.png"
+                src="/images/table.webp"
                 alt="Architectural plans and construction tools on a workbench"
                 fill
                 className="object-cover"
