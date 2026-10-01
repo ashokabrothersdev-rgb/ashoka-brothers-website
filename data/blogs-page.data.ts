@@ -43,7 +43,7 @@ const blogs: Blog[] = [
     title: "Industry News",
     description:
       "What’s Changing in the Hardware Industry - Stay updated on emerging trends, evolving fastening..",
-    image: "/images/product-2.png",
+    image: "/images/products/product-2.png",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -53,7 +53,7 @@ const blogs: Blog[] = [
     title: "Case Studies",
     description:
       "When the Right Fastener Matters - Take a closer look at real-world applications and discover how the right..",
-    image: "/images/product-1.png",
+    image: "/images/products/product-1.png",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
