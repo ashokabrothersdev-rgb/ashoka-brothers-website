@@ -13,7 +13,7 @@ const blogs: Blog[] = [
     title: "Screw Technology",
     description:
       "Understanding Screw Technology - Explore the basics of screw design, thread types and materials..",
-    image: "/images/products/product-1.png",
+    image: "/images/products/product-1.webp",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -23,7 +23,7 @@ const blogs: Blog[] = [
     title: "Installation Guides",
     description:
       "A Guide to Better Installation - Learn the essential practices for selecting, positioning and installing..",
-    image: "/images/products/product-2.png",
+    image: "/images/products/product-2.webp",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -43,7 +43,7 @@ const blogs: Blog[] = [
     title: "Industry News",
     description:
       "What’s Changing in the Hardware Industry - Stay updated on emerging trends, evolving fastening..",
-    image: "/images/products/product-2.png",
+    image: "/images/products/product-2.webp",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",
@@ -53,7 +53,7 @@ const blogs: Blog[] = [
     title: "Case Studies",
     description:
       "When the Right Fastener Matters - Take a closer look at real-world applications and discover how the right..",
-    image: "/images/products/product-1.png",
+    image: "/images/products/product-1.webp",
     author: "Ashoka Brothers",
     authorImage: "/images/testimonial-1.png",
     date: "Feb 12, 2025",

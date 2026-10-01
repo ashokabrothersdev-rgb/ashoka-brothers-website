@@ -33,13 +33,13 @@ export const testimonials: Testimonial[] = [
 
 export const products = [
   {
-    src: "/images/products/product-2.png",
+    src: "/images/products/product-2.webp",
     alt: "Gold wood screw driven into timber",
     width: 1536,
     height: 1268,
   },
   {
-    src: "/images/products/product-1.png",
+    src: "/images/products/product-1.webp",
     alt: "Silver self-tapping screw standing upright",
     width: 1200,
     height: 1000,

@@ -16,7 +16,7 @@ export default function AboutUsPage() {
       <AboutSection
         title={aboutPage.title}
         description={aboutPage.description}
-        buttonHref="/contact-us"
+        buttonHref="#core-values"
       />
       <VisionSection
         title={aboutPage.visionTitle}

@@ -89,7 +89,7 @@ export function VisionSection({
             {description}
           </p>
           <div className="mt-8 sm:mt-10">
-            <ReadMoreButton href="#core-values" text="Read More" />
+            <ReadMoreButton href="/contact-us" text="Get in Touch" />
           </div>
         </motion.div>
 
