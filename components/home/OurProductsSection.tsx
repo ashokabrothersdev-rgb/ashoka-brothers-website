@@ -278,7 +278,7 @@ export function OurProductsSection() {
             across every project.
           </p>
           <div className="mt-8">
-            <ReadMoreButton href="#range" text="Explore Products" />
+            <ReadMoreButton href="/products" text="Explore Products" />
           </div>
         </div>
       </div>

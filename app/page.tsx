@@ -23,6 +23,7 @@ export default function Home() {
         title={aboutSection.title}
         description={aboutSection.description}
         buttonText="Our Story"
+        buttonHref="about-us"
       />
       <FactorySection />
       <OurProductsSection />

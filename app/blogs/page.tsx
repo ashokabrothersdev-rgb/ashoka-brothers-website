@@ -15,6 +15,7 @@ export default function BlogsPage() {
       <AboutSection
         title={blogsPage.title}
         description={blogsPage.description}
+        buttonHref="#blogs"
       />
       <BlogsSection />
     </>

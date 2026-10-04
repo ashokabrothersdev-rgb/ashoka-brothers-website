@@ -11,7 +11,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Csk Sds Screw",
     category: "MS Screw",
-    src: "/images/products/product-1.png",
+    src: "/images/products/product-1.webp",
     alt: "Gold countersunk screw standing in timber",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: true,
@@ -19,7 +19,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Coach Screw",
     category: "SS Screw",
-    src: "/images/products/product-3.jpg",
+    src: "/images/products/product-3.webp",
     alt: "Dark coach screw standing on wood",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: false,
@@ -27,7 +27,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Drywall Screw",
     category: "Screws",
-    src: "/images/products/product-2.png",
+    src: "/images/products/product-2.webp",
     alt: "Silver drywall screw standing upright",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: true,
@@ -35,7 +35,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Csk Sds Screw",
     category: "MS Screw",
-    src: "/images/products/product-4.png",
+    src: "/images/products/product-4.webp",
     alt: "Gold countersunk screws lying on timber",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: true,
@@ -43,7 +43,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Coach Screw",
     category: "SS Screw",
-    src: "/images/products/product-5.png",
+    src: "/images/products/product-5.webp",
     alt: "Silver coach screws lying on a dark surface",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: false,
@@ -51,7 +51,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Drywall Screw",
     category: "Screws",
-    src: "/images/products/product-6.png",
+    src: "/images/products/product-6.webp",
     alt: "A cluster of drywall screws on wood",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: true,
@@ -59,7 +59,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Csk Slotted Self Tapping",
     category: "Screws",
-    src: "/images/products/product-7.png",
+    src: "/images/products/product-7.webp",
     alt: "A cluster of csk slotted self tapping screws on wood",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: false,
@@ -67,7 +67,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Wood Screw",
     category: "Screws",
-    src: "/images/products/product-8.png",
+    src: "/images/products/product-8.webp",
     alt: "A cluster of wood screws on wood",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: true,
@@ -75,7 +75,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Drywall Screw",
     category: "Screws",
-    src: "/images/products/product-9.png",
+    src: "/images/products/product-9.webp",
     alt: "A cluster of drywall screws on wood",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: false,
@@ -83,7 +83,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Cuphook",
     category: "Hook",
-    src: "/images/products/product-10.png",
+    src: "/images/products/product-10.webp",
     alt: "Two silver cup hooks lying on a wooden surface",
     icon: "/icons/hooks.svg",
     hasInnerBorder: true,
@@ -91,7 +91,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Hex Sds 1",
     category: "Bolt",
-    src: "/images/products/product-11.png",
+    src: "/images/products/product-11.webp",
     alt: "Silver hex-head self-drilling screw with sealing washer",
     icon: "/icons/bolts.svg",
     hasInnerBorder: false,
@@ -99,7 +99,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Trusshead",
     category: "Screw",
-    src: "/images/products/product-12.png",
+    src: "/images/products/product-12.webp",
     alt: "Two silver truss-head self-drilling screws",
     icon: "/icons/screws.svg",
     hasInnerBorder: true,
@@ -107,7 +107,7 @@ export const productCards: ProductCard[] = [
   {
     name: "PVC Wall Plug (Gatti)",
     category: "Gatti",
-    src: "/images/products/product-13.png",
+    src: "/images/products/product-13.webp",
     alt: "White PVC wall plugs of multiple sizes",
     icon: "/icons/screw-100.svg",
     hasInnerBorder: false,
@@ -115,7 +115,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Philips Headwood Screw",
     category: "Screw",
-    src: "/images/products/product-14.png",
+    src: "/images/products/product-14.webp",
     alt: "Silver Phillips head wood screw on a dark surface",
     icon: "/icons/screws.svg",
     hasInnerBorder: true,
@@ -123,7 +123,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Cotbolt",
     category: "Bolt",
-    src: "/images/products/product-15.png",
+    src: "/images/products/product-15.webp",
     alt: "Yellow-zinc cotbolts with nuts and washers",
     icon: "/icons/bolts.svg",
     hasInnerBorder: false,
@@ -131,7 +131,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Hex Nut",
     category: "Nut",
-    src: "/images/products/product-16.png",
+    src: "/images/products/product-16.webp",
     alt: "Five silver hexagonal nuts scattered on metal",
     icon: "/icons/nuts.svg",
     hasInnerBorder: true,
@@ -139,7 +139,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Hex Sds",
     category: "Bolt",
-    src: "/images/products/product-17.png",
+    src: "/images/products/product-17.webp",
     alt: "Assorted silver hex-head self-drilling screws",
     icon: "/icons/bolts.svg",
     hasInnerBorder: false,
@@ -147,7 +147,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Washer",
     category: "Washer",
-    src: "/images/products/product-18.png",
+    src: "/images/products/product-18.webp",
     alt: "Flat silver washers of various sizes stacked and scattered",
     icon: "/icons/nut-bolt.svg",
     hasInnerBorder: true,
@@ -155,7 +155,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Carriage Bolt",
     category: "Bolt",
-    src: "/images/products/product-19.png",
+    src: "/images/products/product-19.webp",
     alt: "Four silver carriage bolts with washers and hex nuts standing upright",
     icon: "/icons/bolts.svg",
     hasInnerBorder: false,
@@ -163,7 +163,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Roofing Bolt",
     category: "Bolt",
-    src: "/images/products/product-20.png",
+    src: "/images/products/product-20.webp",
     alt: "Two silver roofing bolts with nuts on a concrete surface",
     icon: "/icons/bolts.svg",
     hasInnerBorder: true,
@@ -171,7 +171,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Nails",
     category: "Nails",
-    src: "/images/products/product-21.png",
+    src: "/images/products/product-21.webp",
     alt: "Two dark rustic nails on a dark surface",
     icon: "/icons/screws.svg",
     hasInnerBorder: false,
@@ -179,7 +179,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Csk Philips Self Tapping",
     category: "Screw",
-    src: "/images/products/product-22.png",
+    src: "/images/products/product-22.webp",
     alt: "Silver Phillips self-tapping screws arranged in a heart shape",
     icon: "/icons/screws.svg",
     hasInnerBorder: true,
@@ -187,7 +187,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Csk Sds Screw",
     category: "Screw",
-    src: "/images/products/product-23.png",
+    src: "/images/products/product-23.webp",
     alt: "Two silver countersunk self-drilling screws",
     icon: "/icons/screws.svg",
     hasInnerBorder: false,
@@ -195,7 +195,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Pure Brass Wood Screw",
     category: "Screw",
-    src: "/images/products/product-24.png",
+    src: "/images/products/product-24.webp",
     alt: "A brass wood screw with a slotted countersunk head",
     icon: "/icons/screws.svg",
     hasInnerBorder: true,
@@ -203,7 +203,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Drywall Screw",
     category: "Screw",
-    src: "/images/products/product-25.png",
+    src: "/images/products/product-25.webp",
     alt: "Four black drywall screws arranged diagonally",
     icon: "/icons/screws.svg",
     hasInnerBorder: false,
@@ -211,7 +211,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Chipboard Screw",
     category: "Screw",
-    src: "/images/products/product-26.png",
+    src: "/images/products/product-26.webp",
     alt: "Silver chipboard screws standing and lying on a light surface",
     icon: "/icons/screws.svg",
     hasInnerBorder: true,
@@ -219,7 +219,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Coach Screw",
     category: "Screw",
-    src: "/images/products/product-27.png",
+    src: "/images/products/product-27.webp",
     alt: "Dark coach screws of various sizes on a white background",
     icon: "/icons/screws.svg",
     hasInnerBorder: false,
@@ -227,7 +227,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Hook",
     category: "Hook",
-    src: "/images/products/product-28.png",
+    src: "/images/products/product-28.webp",
     alt: "Silver screw eye and cup hook on a light background",
     icon: "/icons/hooks.svg",
     hasInnerBorder: true,
@@ -235,7 +235,7 @@ export const productCards: ProductCard[] = [
   {
     name: "Golden Polish Machine",
     category: "Screw",
-    src: "/images/products/product-29.png",
+    src: "/images/products/product-29.webp",
     alt: "A gold-polished slotted machine screw lying horizontally",
     icon: "/icons/screws.svg",
     hasInnerBorder: false,
@@ -247,6 +247,6 @@ export const productsPage = {
   description:
     "Explore our range of quality screws, bolts, nuts and hooks, designed to deliver a secure fit, dependable performance and lasting reliability across a wide range of applications. From everyday fastening needs to demanding projects, our products are built to deliver a firm and reliable hold.",
   isVideo: false,
-  imageSrcDesktop: "/images/screw-hero.png",
-  imageSrcMobile: "/images/screw-hero-m.png",
+  imageSrcDesktop: "/images/screw-hero.webp",
+  imageSrcMobile: "/images/screw-hero-m.webp",
 };

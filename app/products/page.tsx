@@ -17,6 +17,7 @@ export default function ProductsPage() {
         title={productsPage.title}
         description={productsPage.description}
         buttonText="Explore Products"
+        buttonHref="#products"
       />
       <ProductGridSection />
       <ContactSection />
