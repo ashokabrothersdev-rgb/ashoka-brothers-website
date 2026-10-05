@@ -1,8 +1,9 @@
 export const links = [
   { href: "/", label: "Home" },
-  { href: "/about-us", label: "Our Story" },
   { href: "/products", label: "Products" },
+  { href: "/about-us", label: "Our Story" },
   { href: "/blogs", label: "Blogs" },
+  { href: "/media", label: "Media" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 
