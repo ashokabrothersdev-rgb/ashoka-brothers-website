@@ -33,7 +33,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </p>
       <div className="flex items-center gap-4">
         <Image
-          src="/images/testimonial-1.png"
+          src={testimonial.image}
           alt={testimonial.name}
           width={64}
           height={64}
