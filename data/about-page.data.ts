@@ -73,7 +73,7 @@ const MOBILE_CARD_HEIGHT = 560;
 export const aboutPage = {
   title: "About Ashoka Brothers",
   description:
-    "Ashoka Brothers is committed to providing dependable hardware solutions that combine quality, precision and lasting performance. With a focused range of screws, bolts, nuts and hooks, we aim to make every fastening requirement simpler, more reliable and built to last",
+    "Ashoka Brothers is committed to providing dependable hardware solutions that combine quality, precision and lasting performance. With a focused range of screws, bolts, nuts and hooks, we aim to make every fastening requirement simpler, more reliable and built to last.",
   readMoreDescription:
     "Backed by a commitment to consistent quality, we carefully select products that meet the practical demands of everyday applications. From individual requirements to larger projects, our range is designed to offer dependable performance across different needs. We believe in straightforward solutions, reliable products and service you can count on.",
   isVideo: false,
