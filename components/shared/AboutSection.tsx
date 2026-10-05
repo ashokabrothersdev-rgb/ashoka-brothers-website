@@ -1,3 +1,4 @@
+import { AboutDescriptionToggle } from "@/components/shared/AboutDescriptionToggle";
 import { ReadMoreButton } from "@/components/shared/ReadMoreButton";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 
@@ -6,6 +7,7 @@ interface AboutSectionProps {
   description: string;
   buttonText?: string;
   buttonHref?: string;
+  readMoreDescription?: string;
 }
 
 export function AboutSection({
@@ -13,6 +15,7 @@ export function AboutSection({
   description,
   buttonText = "Read More",
   buttonHref,
+  readMoreDescription,
 }: AboutSectionProps) {
   return (
     <section id="our-story" className="py-20 lg:py-25">
@@ -29,9 +32,16 @@ export function AboutSection({
           {description}
         </p>
 
-        <div className="mt-7.5 flex justify-center">
-          <ReadMoreButton href={buttonHref} text={buttonText} />
-        </div>
+        {readMoreDescription ? (
+          <AboutDescriptionToggle
+            readMoreDescription={readMoreDescription}
+            buttonText={buttonText}
+          />
+        ) : (
+          <div className="mt-7.5 flex justify-center">
+            <ReadMoreButton href={buttonHref} text={buttonText} />
+          </div>
+        )}
       </div>
     </section>
   );
