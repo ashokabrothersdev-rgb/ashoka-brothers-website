@@ -1,30 +1,36 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import { type FormEvent, useState } from "react";
+import { useForm } from "react-hook-form";
+import {
+  contactFormSchema,
+  type ContactFormSchemaType,
+} from "@/lib/contact-form.validations";
 
-type FormState = {
-  name: string;
-  email: string;
-  phone: string;
-};
-
-const initialState: FormState = {
-  name: "",
-  email: "",
-  phone: "",
-};
+const inputClassName =
+  "h-12 w-full border bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic";
 
 export function ContactSection() {
-  const [form, setForm] = useState<FormState>(initialState);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormSchemaType>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+    },
+  });
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    console.log({
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-    });
+  const phoneField = register("phone");
+
+  function onSubmit(data: ContactFormSchemaType) {
+    console.log(data);
+    reset();
   }
 
   return (
@@ -49,33 +55,59 @@ export function ContactSection() {
             Get in Touch
           </h2>
 
-          <form className="mt-8 flex flex-col gap-6" onSubmit={handleSubmit}>
+          <form
+            className="mt-8 flex flex-col gap-6"
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+          >
             <label className="flex w-full flex-col gap-1.5">
               <span className="text-[16px] leading-5 text-white">Name</span>
               <input
-                name="name"
                 type="text"
                 placeholder="Add Name"
-                value={form.name}
-                onChange={(event) =>
-                  setForm((prev) => ({ ...prev, name: event.target.value }))
+                autoComplete="name"
+                maxLength={50}
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={
+                  errors.name ? "contact-name-error" : undefined
                 }
-                className="h-12 w-full border border-white bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic"
+                className={`${inputClassName} ${errors.name ? "border-red-500" : "border-white"}`}
+                {...register("name")}
               />
+              {errors.name ? (
+                <p
+                  id="contact-name-error"
+                  role="alert"
+                  className="text-[13px] leading-4 text-red-500"
+                >
+                  {errors.name.message}
+                </p>
+              ) : null}
             </label>
 
             <label className="flex w-full flex-col gap-1.5">
               <span className="text-[16px] leading-5 text-white">Email</span>
               <input
-                name="email"
                 type="email"
                 placeholder="Add Email"
-                value={form.email}
-                onChange={(event) =>
-                  setForm((prev) => ({ ...prev, email: event.target.value }))
+                autoComplete="email"
+                maxLength={50}
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={
+                  errors.email ? "contact-email-error" : undefined
                 }
-                className="h-12 w-full border border-white bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic"
+                className={`${inputClassName} ${errors.email ? "border-red-500" : "border-white"}`}
+                {...register("email")}
               />
+              {errors.email ? (
+                <p
+                  id="contact-email-error"
+                  role="alert"
+                  className="text-[13px] leading-4 text-red-500"
+                >
+                  {errors.email.message}
+                </p>
+              ) : null}
             </label>
 
             <label className="flex w-full flex-col gap-1.5">
@@ -83,15 +115,33 @@ export function ContactSection() {
                 Phone No.
               </span>
               <input
-                name="phone"
                 type="tel"
+                inputMode="numeric"
+                autoComplete="tel"
                 placeholder="Add Number"
-                value={form.phone}
-                onChange={(event) =>
-                  setForm((prev) => ({ ...prev, phone: event.target.value }))
+                maxLength={10}
+                aria-invalid={Boolean(errors.phone)}
+                aria-describedby={
+                  errors.phone ? "contact-phone-error" : undefined
                 }
-                className="h-12 w-full border border-white bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic"
+                className={`${inputClassName} ${errors.phone ? "border-red-500" : "border-white"}`}
+                {...phoneField}
+                onChange={(event) => {
+                  event.target.value = event.target.value
+                    .replace(/\D/g, "")
+                    .slice(0, 10);
+                  phoneField.onChange(event);
+                }}
               />
+              {errors.phone ? (
+                <p
+                  id="contact-phone-error"
+                  role="alert"
+                  className="text-[13px] leading-4 text-red-500"
+                >
+                  {errors.phone.message}
+                </p>
+              ) : null}
             </label>
 
             <button
