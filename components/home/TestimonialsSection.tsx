@@ -4,6 +4,21 @@ import { useRef, useState } from "react";
 import { testimonials } from "@/data/home-page.data";
 import { TestimonialCard } from "@/components/shared/Stars";
 
+function TestimonialTrack({ hidden = false }: { hidden?: boolean }) {
+  return (
+    <div
+      className="flex shrink-0 gap-7.5 pr-7.5"
+      aria-hidden={hidden || undefined}
+    >
+      {testimonials.map((item, index) => (
+        <div key={`${item.name}-${index}`} className="w-100 shrink-0">
+          <TestimonialCard testimonial={item} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function TestimonialsSection() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -70,7 +85,33 @@ export function TestimonialsSection() {
         </div>
 
         {/* Desktop Testimonials */}
-        <div className="hidden gap-7.5 lg:grid lg:grid-cols-3">
+        <div className="testimonial-desktop relative">
+          <div className="overflow-hidden py-5">
+            <div className="testimonial-marquee flex w-max">
+              <TestimonialTrack />
+              {/* Hidden testimonials for the marquee effect */}
+              <TestimonialTrack hidden />
+              <TestimonialTrack hidden />
+            </div>
+          </div>
+          <div
+            aria-hidden
+            className="testimonial-edge-blur testimonial-edge-blur-left"
+          />
+          <div
+            aria-hidden
+            className="testimonial-edge-fade testimonial-edge-fade-left"
+          />
+          <div
+            aria-hidden
+            className="testimonial-edge-blur testimonial-edge-blur-right"
+          />
+          <div
+            aria-hidden
+            className="testimonial-edge-fade testimonial-edge-fade-right"
+          />
+        </div>
+        <div className="testimonial-desktop-static grid-cols-3 gap-7.5">
           {testimonials.map((item, index) => (
             <TestimonialCard key={`${item.name}-${index}`} testimonial={item} />
           ))}

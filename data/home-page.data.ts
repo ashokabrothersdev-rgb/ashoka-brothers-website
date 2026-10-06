@@ -2,6 +2,7 @@ export type Testimonial = {
   quote: string;
   name: string;
   role: string;
+  image: string;
 };
 
 export const testimonials: Testimonial[] = [
@@ -10,24 +11,28 @@ export const testimonials: Testimonial[] = [
       "The product quality has been consistently good, with the right finish and reliable performance. Ashoka Brothers - a dependable choice for our regular hardware requirements",
     name: "Rajiv Mehta",
     role: "Business Owner",
+    image: "/images/testimonials/person-1.png",
   },
   {
     quote:
       "We’ve been sourcing our fastening requirements from Ashoka Brothers and have always found the products reliable. Good quality, good range, and consistent service",
     name: "Amit Sharma",
     role: "Contractor",
+    image: "/images/testimonials/person-2.png",
   },
   {
     quote:
       "What stands out is the consistency in quality. The screws and fasteners have a good finish and hold well across different applications. Always a reliable experience",
     name: "Vikram Patel",
     role: "Hardware Dealer",
+    image: "/images/testimonials/person-3.png",
   },
   {
     quote:
       "Ashoka Brothers offers a good range of hardware for our day-to-day requirements. The products are dependable, and their service makes the overall experience smooth",
     name: "Suresh Kumar",
     role: "Business Owner",
+    image: "/images/testimonials/person-4.png",
   },
 ];
 

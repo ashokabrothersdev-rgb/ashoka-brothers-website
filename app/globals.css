@@ -52,3 +52,106 @@ body {
 .font-jost {
   font-family: var(--font-jost), Arial, Helvetica, sans-serif;
 }
+
+@keyframes testimonial-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.testimonial-desktop,
+.testimonial-desktop-static {
+  display: none;
+}
+
+.testimonial-marquee {
+  animation: testimonial-marquee 45s linear infinite;
+}
+
+.testimonial-marquee:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-edge-blur,
+.testimonial-edge-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 8rem;
+  pointer-events: none;
+}
+
+.testimonial-edge-fade {
+  z-index: 11;
+  width: 5.5rem;
+}
+
+.testimonial-edge-blur-left,
+.testimonial-edge-fade-left {
+  left: 0;
+}
+
+.testimonial-edge-blur-right,
+.testimonial-edge-fade-right {
+  right: 0;
+}
+
+.testimonial-edge-blur {
+  background: rgb(255 255 255 / 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.testimonial-edge-blur-left {
+  mask-image: linear-gradient(to right, #000 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.testimonial-edge-blur-right {
+  mask-image: linear-gradient(to left, #000 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, #000 0%, transparent 100%);
+}
+
+.testimonial-edge-fade-left {
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    rgb(255 255 255 / 0.72) 42%,
+    transparent 100%
+  );
+}
+
+.testimonial-edge-fade-right {
+  background: linear-gradient(
+    to left,
+    #fff 0%,
+    rgb(255 255 255 / 0.72) 42%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 64rem) {
+  .testimonial-desktop {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-marquee {
+    animation: none;
+  }
+}
+
+@media (min-width: 64rem) and (prefers-reduced-motion: reduce) {
+  .testimonial-desktop {
+    display: none;
+  }
+
+  .testimonial-desktop-static {
+    display: grid;
+  }
+}
