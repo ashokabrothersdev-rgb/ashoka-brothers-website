@@ -57,7 +57,7 @@ function ProductCard({ product, index }: ProductCardProps) {
         />
         <span className="absolute bottom-5 left-5 flex md:size-12.5 size-10 items-center justify-center bg-[#f4efe6]">
           <Image
-            src={product.icon}
+            src="/icons/screw-100.svg"
             alt="Icon of the product"
             width={32}
             height={32}
