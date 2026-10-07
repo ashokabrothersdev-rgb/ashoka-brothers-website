@@ -13,14 +13,20 @@ export function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex h-22.5 max-w-384 items-center justify-between px-5 sm:px-10 lg:px-15">
-        <Image
-          src="/icons/logo.svg"
-          alt="Ashoka Brothers"
-          width={275}
-          height={64}
-          className="h-10 w-auto sm:h-12 lg:h-16"
-          loading="eager"
-        />
+        <Link
+          href="/"
+          aria-label="Ashoka Brothers, go to home"
+          onClick={() => setOpen(false)}
+        >
+          <Image
+            src="/icons/logo.svg"
+            alt="Ashoka Brothers"
+            width={275}
+            height={64}
+            className="h-10 w-auto sm:h-12 lg:h-16"
+            loading="eager"
+          />
+        </Link>
 
         <nav className="hidden items-center gap-6 xl:gap-8 2xl:gap-10 lg:flex">
           {links.map((link) => (

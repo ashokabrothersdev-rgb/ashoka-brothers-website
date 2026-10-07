@@ -1,4 +1,5 @@
 import { ContactInfoSection } from "@/components/contact/ContactInfoSection";
+import { MapSection } from "@/components/contact/MapSection";
 import { ContactSection } from "@/components/shared/ContactSection";
 import { HeroSection } from "@/components/shared/HeroSection";
 import { contactPage } from "@/data/contact-page.data";
@@ -13,6 +14,7 @@ export default function ContactUsPage() {
         className="md:h-190"
       />
       <ContactInfoSection />
+      <MapSection />
       <ContactSection />
     </>
   );
