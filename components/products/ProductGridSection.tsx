@@ -32,8 +32,8 @@ type ProductCardProps = {
 };
 
 function ProductCard({ product, index }: ProductCardProps) {
-  const onLightMobile = index >= 6;
-  const onLightFromSm = index >= 27;
+  const onLightMobile = index >= 5;
+  const onLightFromSm = index >= 21;
   const categoryTone = onLightFromSm
     ? "text-[#a8906a]"
     : onLightMobile
@@ -75,7 +75,7 @@ function ProductCard({ product, index }: ProductCardProps) {
         {product.category}
       </p>
       <h3
-        className={`md:mt-4 mt-2.5 font-canela text-[24px] leading-7.5 sm:text-[30px] ${nameTone}`}
+        className={`md:mt-4 mt-2.5 font-canela text-[24px] leading-7.5 sm:text-[28px] ${nameTone}`}
       >
         {product.name}
       </h3>

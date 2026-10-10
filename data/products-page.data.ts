@@ -8,48 +8,6 @@ export type ProductCard = {
 
 export const productCards: ProductCard[] = [
   {
-    name: "Csk Sds Screw",
-    category: "MS Screw",
-    src: "/images/products/product-1.webp",
-    alt: "Gold countersunk screw standing in timber",
-    hasInnerBorder: true,
-  },
-  {
-    name: "Coach Screw",
-    category: "SS Screw",
-    src: "/images/products/product-3.webp",
-    alt: "Dark coach screw standing on wood",
-    hasInnerBorder: false,
-  },
-  {
-    name: "Drywall Screw",
-    category: "Screws",
-    src: "/images/products/product-2.webp",
-    alt: "Silver drywall screw standing upright",
-    hasInnerBorder: true,
-  },
-  {
-    name: "Csk Sds Screw",
-    category: "MS Screw",
-    src: "/images/products/product-4.webp",
-    alt: "Gold countersunk screws lying on timber",
-    hasInnerBorder: true,
-  },
-  {
-    name: "Coach Screw",
-    category: "SS Screw",
-    src: "/images/products/product-5.webp",
-    alt: "Silver coach screws lying on a dark surface",
-    hasInnerBorder: false,
-  },
-  {
-    name: "Drywall Screw",
-    category: "Screws",
-    src: "/images/products/product-6.webp",
-    alt: "A cluster of drywall screws on wood",
-    hasInnerBorder: true,
-  },
-  {
     name: "Csk Slotted Self Tapping",
     category: "Screws",
     src: "/images/products/product-7.webp",
@@ -78,7 +36,7 @@ export const productCards: ProductCard[] = [
     hasInnerBorder: true,
   },
   {
-    name: "Hex Sds 1",
+    name: "Hex Sds Screw with EPDM Washer",
     category: "Bolt",
     src: "/images/products/product-11.webp",
     alt: "Silver hex-head self-drilling screw with sealing washer",
@@ -204,7 +162,7 @@ export const productCards: ProductCard[] = [
     hasInnerBorder: true,
   },
   {
-    name: "Golden Polish Machine",
+    name: "Golden Polish Machine Screw",
     category: "Screw",
     src: "/images/products/product-29.webp",
     alt: "A gold-polished slotted machine screw lying horizontally",
