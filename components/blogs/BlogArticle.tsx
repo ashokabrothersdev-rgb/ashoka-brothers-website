@@ -54,7 +54,8 @@ export function BlogArticle({ blog }: { blog: Blog }) {
           priority
           className="object-cover object-center w-full h-full"
         />
-        <div className="absolute inset-0 bg-linear-to-r from-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-x-0 bottom-0 h-[12%] bg-linear-to-t from-[#B99470]/25 to-transparent" />
       </div>
 
       <div className="mx-auto w-full max-w-360 px-5 pt-16 pb-24 text-center sm:px-10 lg:pt-27.5 lg:pb-28">
