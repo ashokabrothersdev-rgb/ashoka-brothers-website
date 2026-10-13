@@ -46,7 +46,9 @@ export const blogs: Blog[] = [
       {
         sectionTitle: "Choosing the Right Material and Finish",
         sectionContent:
-          "The material of a screw plays a major role in its strength, durability and resistance to corrosion. Steel screws are commonly used for general fastening because of their versatility, while stainless steel is often preferred in environments where moisture and corrosion are concerns. Other materials and protective coatings may be suitable depending on the working conditions and the demands of the application. The finish deserves just as much attention as the base material. Coatings can help protect a screw against corrosion and wear, but their suitability depends on where and how the fastener will be used. A screw intended for an indoor furniture project may have different requirements from one exposed to rain, humidity or industrial conditions. Checking these factors before purchasing can help avoid premature deterioration and unnecessary replacement.",
+          "The material of a screw plays a major role in its strength, durability and resistance to corrosion. Steel screws are commonly used for general fastening because of their versatility, while stainless steel is often preferred in environments where moisture and corrosion are concerns. Other materials and protective coatings may be suitable depending on the working conditions and the demands of the application.",
+        sectionSecondaryContent:
+          "The finish deserves just as much attention as the base material. Coatings can help protect a screw against corrosion and wear, but their suitability depends on where and how the fastener will be used. A screw intended for an indoor furniture project may have different requirements from one exposed to rain, humidity or industrial conditions. Checking these factors before purchasing can help avoid premature deterioration and unnecessary replacement.",
       },
       {
         sectionTitle: "Getting the Best Performance from a Screw",
