@@ -2,11 +2,13 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   contactFormSchema,
   type ContactFormSchemaType,
 } from "@/lib/contact-form.validations";
+import { formAction } from "@/lib/form.action";
 
 const inputClassName =
   "h-12 w-full border bg-transparent px-3.5 font-sans text-[16px] text-white italic outline-none placeholder:text-white placeholder:italic";
@@ -16,7 +18,7 @@ export function ContactSection() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<ContactFormSchemaType>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -25,12 +27,20 @@ export function ContactSection() {
       phone: "",
     },
   });
+  const [submitMessage, setSubmitMessage] = useState<{
+    ok: boolean;
+    message: string;
+  } | null>(null);
 
   const phoneField = register("phone");
 
-  function onSubmit(data: ContactFormSchemaType) {
-    console.log(data);
-    reset();
+  async function onSubmit(data: ContactFormSchemaType) {
+    const result = await formAction(data);
+    setSubmitMessage(result);
+
+    if (result.ok) {
+      reset();
+    }
   }
 
   return (
@@ -146,10 +156,21 @@ export function ContactSection() {
 
             <button
               type="submit"
-              className="mt-2 h-10 w-29 border border-white bg-white text-[14px] leading-3.5 tracking-[0.7px] text-[#a87d53] uppercase transition-opacity hover:opacity-80"
+              disabled={isSubmitting}
+              aria-busy={isSubmitting}
+              className="mt-2 h-10 w-29 border border-white bg-white text-[14px] leading-3.5 tracking-[0.7px] text-[#a87d53] uppercase transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-60"
             >
               Submit
             </button>
+            {submitMessage ? (
+              <p
+                role="status"
+                aria-live="polite"
+                className={`text-[13px] leading-4 ${submitMessage.ok ? "text-white" : "text-red-500"}`}
+              >
+                {submitMessage.message}
+              </p>
+            ) : null}
           </form>
         </div>
       </div>
