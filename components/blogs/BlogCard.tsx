@@ -7,7 +7,7 @@ export function BlogCard({ blog }: { blog: Blog }) {
     <article className="flex h-full flex-col bg-white">
       <div className="relative h-62.5 overflow-hidden">
         <Image
-          src={blog.image}
+          src={blog.thumbnail}
           alt={blog.title}
           fill
           className="object-cover object-center"
@@ -44,12 +44,12 @@ export function BlogCard({ blog }: { blog: Blog }) {
           </div>
 
           <Link
-            href={blog.href}
+            href={`/blogs/${blog.slug}`}
             aria-label={`Read ${blog.title}`}
             className="flex size-9 shrink-0 items-center justify-center transition-opacity hover:opacity-90"
           >
             <Image
-              src="/images/arrow-5.svg"
+              src="/icons/arrow-5.svg"
               alt="Arrow Right"
               width={12}
               height={12}
