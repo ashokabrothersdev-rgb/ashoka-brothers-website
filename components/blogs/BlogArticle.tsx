@@ -22,24 +22,60 @@ function ArticleCopy({
   );
 }
 
-function MiddleImage({ src, alt }: { src: string; alt: string }) {
+function MiddleImages({ images }: { images: { src: string; alt: string }[] }) {
+  if (images.length === 0) return null;
+
+  const paired = images.length > 1;
+
   return (
-    <figure className="relative mx-auto mt-12 aspect-3/2 w-full max-w-234 overflow-hidden lg:mt-14">
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover object-center"
-        sizes="(max-width: 1024px) 100vw, 936px"
-      />
-    </figure>
+    <div
+      className={
+        paired
+          ? "mx-auto mt-12 flex w-full max-w-234 flex-col gap-5 lg:mt-14 lg:w-fit lg:max-w-none lg:flex-row lg:gap-4"
+          : "mx-auto mt-12 w-full max-w-234 lg:mt-14"
+      }
+    >
+      {images.map((image) => (
+        <figure
+          key={image.src}
+          className={
+            paired
+              ? "relative aspect-square w-full overflow-hidden lg:size-115 lg:shrink-0"
+              : "relative aspect-3/2 w-full overflow-hidden"
+          }
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover object-center"
+            sizes={
+              paired
+                ? "(max-width: 1024px) 100vw, 460px"
+                : "(max-width: 1024px) 100vw, 936px"
+            }
+          />
+        </figure>
+      ))}
+    </div>
   );
 }
 
 export function BlogArticle({ blog }: { blog: Blog }) {
-  const { mainImage, mainImageAlt, middleImage, middleImageAlt, content } =
-    blog;
+  const {
+    mainImage,
+    mainImageAlt,
+    middleImage,
+    middleImageAlt,
+    middleImage2,
+    middleImage2Alt,
+    content,
+  } = blog;
   const [intro, ...sections] = content;
+  const middleImages = [
+    middleImage ? { src: middleImage, alt: middleImageAlt } : null,
+    middleImage2 ? { src: middleImage2, alt: middleImage2Alt ?? "" } : null,
+  ].filter((image): image is { src: string; alt: string } => image !== null);
   const copyClassName =
     "mx-auto max-w-234 space-y-2 font-canela text-[15px] leading-7 text-[#282828] sm:text-[17px] sm:leading-8.5";
 
@@ -86,14 +122,14 @@ export function BlogArticle({ blog }: { blog: Blog }) {
                 className={`${copyClassName} mt-5`}
               />
             </section>
-            {middleImage && index === 0 ? (
-              <MiddleImage src={middleImage} alt={middleImageAlt} />
+            {middleImages.length > 0 && index === 0 ? (
+              <MiddleImages images={middleImages} />
             ) : null}
           </Fragment>
         ))}
 
-        {middleImage && sections.length === 0 ? (
-          <MiddleImage src={middleImage} alt={middleImageAlt} />
+        {middleImages.length > 0 && sections.length === 0 ? (
+          <MiddleImages images={middleImages} />
         ) : null}
       </div>
     </article>
