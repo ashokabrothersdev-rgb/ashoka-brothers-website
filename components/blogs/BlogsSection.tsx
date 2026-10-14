@@ -1,4 +1,4 @@
-import { blogsPage } from "@/data/blogs-page.data";
+import { blogs } from "@/data/blogs-page.data";
 import { BlogCard } from "./BlogCard";
 
 export function BlogsSection() {
@@ -10,7 +10,7 @@ export function BlogsSection() {
         </h2>
 
         <div className="md:-mt-7.5 -mt-1 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-7.5">
-          {blogsPage.blogs.map((blog) => (
+          {blogs.map((blog) => (
             <BlogCard key={blog.title} blog={blog} />
           ))}
         </div>
