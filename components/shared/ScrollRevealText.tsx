@@ -38,7 +38,7 @@ export function ScrollRevealText({
       aria-hidden={ariaHidden}
       className={className}
       initial={
-        reduceMotion ? false : { opacity: 0, y: 28, filter: "blur(4px)" }
+        reduceMotion ? false : { opacity: 0, y: 28, filter: "blur(2px)" }
       }
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once, amount }}
