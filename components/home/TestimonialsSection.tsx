@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { testimonials } from "@/data/home-page.data";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { TestimonialCard } from "@/components/shared/Stars";
+import { testimonials } from "@/data/home-page.data";
 
 function TestimonialTrack({ hidden = false }: { hidden?: boolean }) {
   return (
@@ -41,9 +42,12 @@ export function TestimonialsSection() {
 
   return (
     <section id="testimonials" className="py-16 lg:py-25">
-      <h2 className="text-center font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]">
+      <ScrollRevealText
+        as="h2"
+        className="text-center font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
+      >
         Testimonials
-      </h2>
+      </ScrollRevealText>
 
       <div className="mx-auto mt-7.5 max-w-354 px-5 sm:px-10">
         {/* Mobile Testimonials */}

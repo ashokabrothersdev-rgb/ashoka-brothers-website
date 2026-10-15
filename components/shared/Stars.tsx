@@ -1,3 +1,4 @@
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { Testimonial } from "@/data/home-page.data";
 import Image from "next/image";
 
@@ -28,9 +29,9 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <article className="relative flex h-full flex-col justify-between bg-white px-10 py-7.5 shadow-md md:shadow-[4px_4px_16px_0px_rgba(0,0,0,0.25)]">
       <Stars />
-      <p className="mt-7 min-h-50 text-[17px] leading-8.5 text-[#4f4f4f]">
+      <ScrollRevealText className="mt-7 min-h-50 text-[17px] leading-8.5 text-[#4f4f4f]">
         &ldquo;{testimonial.quote}&rdquo;
-      </p>
+      </ScrollRevealText>
       <div className="flex items-center gap-4">
         <Image
           src={testimonial.image}

@@ -1,7 +1,7 @@
-import { AboutCarouselItem } from "@/data/about-page.data";
+import { AboutCarouselItem, aboutPage } from "@/data/about-page.data";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { aboutPage } from "@/data/about-page.data";
 
 interface ValueCardProps {
   idPrefix: string;
@@ -78,12 +78,16 @@ export function ValueCard({
       <div className="absolute inset-x-0 bottom-0 z-10">
         <div className="pointer-events-none absolute inset-x-0 -top-24 bottom-0 bg-linear-to-t from-black/85 via-black/45 to-transparent" />
         <div className="relative px-5 pt-16 pb-6 sm:px-7 sm:pb-8">
-          <p className="font-jost text-[11px] tracking-[0.22em] text-white/75 uppercase">
+          <ScrollRevealText className="font-jost text-[11px] tracking-[0.22em] text-white/75 uppercase">
             {item.badge}
-          </p>
-          <h3 className="mt-2 font-canela text-[30px] leading-[1.15] font-light text-white sm:text-[30px]">
+          </ScrollRevealText>
+          <ScrollRevealText
+            as="h3"
+            delay={0.1}
+            className="mt-2 font-canela text-[30px] leading-[1.15] font-light text-white sm:text-[30px]"
+          >
             {item.title}
-          </h3>
+          </ScrollRevealText>
           <motion.div
             initial={false}
             animate={{ gridTemplateRows: expanded ? "1fr" : "0fr" }}

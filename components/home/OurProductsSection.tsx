@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { ReadMoreButton } from "@/components/shared/ReadMoreButton";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 import { products } from "@/data/home-page.data";
 
@@ -264,19 +265,25 @@ export function OurProductsSection() {
         </div>
 
         <div className="text-white sm:px-5">
-          <h2 className="flex items-center gap-7.5 font-canela text-[28px] leading-15 tracking-[1.92px] sm:text-[48px]">
+          <ScrollRevealText
+            as="h2"
+            className="flex items-center gap-7.5 font-canela text-[28px] leading-15 tracking-[1.92px] sm:text-[48px]"
+          >
             Our Products
             <ScrewMark
               className="mt-5 hidden opacity-50 invert lg:block"
               size={13}
             />
-          </h2>
-          <p className="mt-4 font-canela text-[14px] leading-7 sm:mt-7.5 sm:text-[16px] sm:leading-8.5">
+          </ScrollRevealText>
+          <ScrollRevealText
+            delay={0.15}
+            className="mt-4 font-canela text-[14px] leading-7 sm:mt-7.5 sm:text-[16px] sm:leading-8.5"
+          >
             From precision screws and dependable bolts to nuts, hooks and
             fastening essentials, Ashoka Brothers offers a reliable range built
             for secure performance, consistent quality and lasting results
             across every project.
-          </p>
+          </ScrollRevealText>
           <div className="mt-8">
             <ReadMoreButton href="/products" text="Explore Products" />
           </div>

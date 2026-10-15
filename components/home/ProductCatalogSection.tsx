@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 import { productCatalog } from "@/data/home-page.data";
 
@@ -22,12 +23,21 @@ export function ProductCatalogSection() {
         />
 
         <div>
-          <h2 className="font-canela text-[28px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px]">
+          <ScrollRevealText
+            as="h2"
+            className="font-canela text-[28px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px]"
+          >
             Products
-          </h2>
+          </ScrollRevealText>
           <ul className="mt-5 font-canela text-[16px] leading-10 tracking-[0.9px] text-[#282828] sm:mt-7.5 sm:text-[18px]">
-            {productCatalog.map((item) => (
-              <li key={item}>{item}</li>
+            {productCatalog.map((item, index) => (
+              <ScrollRevealText
+                key={item}
+                as="li"
+                delay={0.12 + index * 0.08}
+              >
+                {item}
+              </ScrollRevealText>
             ))}
           </ul>
 

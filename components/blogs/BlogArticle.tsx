@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 import type { Blog } from "@/data/blogs-page.data";
 
@@ -14,9 +15,11 @@ function ArticleCopy({
 }) {
   return (
     <div className={className}>
-      <p>{section.sectionContent}</p>
+      <ScrollRevealText>{section.sectionContent}</ScrollRevealText>
       {section.sectionSecondaryContent ? (
-        <p>{section.sectionSecondaryContent}</p>
+        <ScrollRevealText delay={0.12}>
+          {section.sectionSecondaryContent}
+        </ScrollRevealText>
       ) : null}
     </div>
   );
@@ -99,9 +102,12 @@ export function BlogArticle({ blog }: { blog: Blog }) {
           <header>
             <div className="mx-auto flex max-w-270 items-center justify-center gap-3 sm:gap-7.5">
               <ScrewMark size={13} className="shrink-0" />
-              <h1 className="min-w-0 font-canela text-[26px] text-balance leading-10 tracking-[1px] text-[#282828] sm:text-[40px] sm:leading-13 lg:text-[48px] lg:leading-15 lg:tracking-[1.92px]">
+              <ScrollRevealText
+                as="h1"
+                className="min-w-0 font-canela text-[26px] leading-10 text-balance tracking-[1px] text-[#282828] sm:text-[40px] sm:leading-13 lg:text-[48px] lg:leading-15 lg:tracking-[1.92px]"
+              >
                 {intro.sectionTitle}
-              </h1>
+              </ScrollRevealText>
               <ScrewMark size={13} className="shrink-0" />
             </div>
             <ArticleCopy
@@ -114,9 +120,12 @@ export function BlogArticle({ blog }: { blog: Blog }) {
         {sections.map((section, index) => (
           <Fragment key={`${section.sectionTitle}-${index}`}>
             <section className="mt-8 lg:mt-12.5">
-              <h2 className="font-canela text-[22px] text-balance leading-8 tracking-[0.8px] text-[#282828] sm:text-[30px] sm:leading-11.25 sm:tracking-[1.2px]">
+              <ScrollRevealText
+                as="h2"
+                className="font-canela text-[22px] leading-8 text-balance tracking-[0.8px] text-[#282828] sm:text-[30px] sm:leading-11.25 sm:tracking-[1.2px]"
+              >
                 {section.sectionTitle}
-              </h2>
+              </ScrollRevealText>
               <ArticleCopy
                 section={section}
                 className={`${copyClassName} mt-5`}
