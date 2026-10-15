@@ -7,6 +7,8 @@ export interface Blog {
   mainImageAlt: string;
   middleImage: string;
   middleImageAlt: string;
+  middleImage2?: string;
+  middleImage2Alt?: string;
   author: string;
   authorImage: string;
   date: string;
@@ -114,6 +116,8 @@ export const blogs: Blog[] = [
     mainImageAlt: "Main Image 3",
     middleImage: "/images/blogs/middle-image-3.png",
     middleImageAlt: "Middle Image 3",
+    middleImage2: "/images/blogs/middle-image-3-2.png",
+    middleImage2Alt: "Middle Image 3-2",
     content: [
       {
         sectionTitle:
@@ -124,21 +128,23 @@ export const blogs: Blog[] = [
       {
         sectionTitle: "Selecting Screws for Wood and Metal",
         sectionContent:
-          "Every part of a screw has a specific function. The head determines how the screw is driven and how it sits against the surface, while the shank provides the main body of the fastener. The threads create the grip needed to hold materials together, and the tip helps the screw enter the material during installation. Thread design is particularly important when selecting a screw. Coarse threads are commonly used in wood and other softer materials, where they can provide a strong grip. Fine threads are often used in metal applications, where their smaller spacing can offer more controlled engagement. The choice also depends on the material's thickness, the required holding strength and the type of joint being assembled.",
+          "Wood screws are commonly used in furniture, cabinetry, carpentry and general woodworking. Their thread design helps them grip timber, but the right length and diameter still matter. A screw that is too short may not provide sufficient engagement, while one that is too long can protrude through the material or damage components on the other side. When working with hardwood or fastening close to an edge, a pilot hole may help reduce splitting and make installation easier.",
+        sectionSecondaryContent:
+          "Metal applications require a different approach. The choice depends on the type and thickness of the metal, the design of the joint and whether a pre-drilled hole is available. Self-drilling screws can create their own hole in compatible materials, making them useful for certain fabrication, roofing and sheet-metal applications. Other situations may require a screw that engages with a prepared hole or a matching threaded component. Checking the fastener's specifications before installation helps ensure it is suited to the task.",
       },
       {
         sectionTitle: "Consider the Environment and Working Conditions",
         sectionContent:
-          "The material of a screw plays a major role in its strength, durability and resistance to corrosion. Steel screws are commonly used for general fastening because of their versatility, while stainless steel is often preferred in environments where moisture and corrosion are concerns. Other materials and protective coatings may be suitable depending on the working conditions and the demands of the application.",
+          "The surrounding environment is another important factor when selecting fasteners. Screws used outdoors or in damp areas may be exposed to moisture, temperature changes and corrosive conditions. Stainless steel or appropriately coated fasteners can offer improved corrosion resistance, depending on the grade, coating and application. It is also important to consider contact with other materials, as certain combinations can create additional corrosion risks.",
         sectionSecondaryContent:
-          "The finish deserves just as much attention as the base material. Coatings can help protect a screw against corrosion and wear, but their suitability depends on where and how the fastener will be used. A screw intended for an indoor furniture project may have different requirements from one exposed to rain, humidity or industrial conditions. Checking these factors before purchasing can help avoid premature deterioration and unnecessary replacement.",
+          "For indoor furniture and general repairs, appearance and the type of finish may also influence the decision. A countersunk head may be suitable when a flush surface is required, while other head styles may be better for specific installation methods or access requirements. Choosing a fastener that suits both the practical needs and the finished appearance of the project helps avoid compromises later.",
       },
       {
         sectionTitle: "Make the Right Choice Before Installation",
         sectionContent:
-          "Selecting the right screw involves more than choosing a size that looks appropriate. Consider the materials being joined, the thickness of each component, the expected load and the conditions in which the assembly will be used. The correct length, diameter, head type and driver can all contribute to a better installation.",
+          "Before purchasing or installing a screw, check the material being joined, the required length and diameter, the head type, and the conditions in which the finished assembly will be used. Consider whether the connection needs to support a particular load and whether the screw will be exposed to vibration, moisture or repeated movement. For structural or safety-critical applications, use fasteners that meet the relevant specifications rather than relying on appearance alone.",
         sectionSecondaryContent:
-          "A well-matched fastener helps reduce installation problems and supports the reliability of the finished joint. By paying attention to thread design, material and finish, you can make a more informed choice for everything from simple household repairs to demanding construction and fabrication work.",
+          "The right fastener is one that suits the job from the start. Paying attention to these details can make installation more straightforward, reduce the likelihood of damage and help the finished assembly remain secure over time. Whether you are working on a small repair or a larger project, choosing carefully is a simple step towards better results.",
       },
     ],
   },

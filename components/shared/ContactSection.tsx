@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import {
   contactFormSchema,
   type ContactFormSchemaType,
@@ -61,9 +62,12 @@ export function ContactSection() {
 
       <div className="relative mx-auto flex min-h-160 max-w-384 items-center justify-end px-5 py-16 sm:px-10 lg:min-h-200 lg:px-20">
         <div className="w-full max-w-100 border-t border-l border-white bg-[#ffffff]/5 p-10 shadow-[inset_-4.5px_-4.5px_1.5px_-5.25px_rgba(255,255,255,0.5),inset_4.5px_4.5px_1.5px_-5.25px_rgba(255,255,255,0.5)] backdrop-blur-[18px]">
-          <h2 className="font-canela text-[28px] leading-12.5 tracking-[2px] text-white uppercase sm:text-[38px] sm:leading-15">
+          <ScrollRevealText
+            as="h2"
+            className="font-canela text-[28px] leading-12.5 tracking-[2px] text-white uppercase sm:text-[38px] sm:leading-15"
+          >
             Get in Touch
-          </h2>
+          </ScrollRevealText>
 
           <form
             className="mt-8 flex flex-col gap-6"

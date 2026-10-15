@@ -7,6 +7,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 
 export function CountAnimation({
   value,
@@ -45,9 +46,9 @@ export function CountAnimation({
           {suffix}
         </span>
       </p>
-      <p className="font-jost font-normal text-[14px] leading-5 sm:leading-6 text-[#272626] sm:text-[24px]">
+      <ScrollRevealText className="font-jost font-normal text-[14px] leading-5 text-[#272626] sm:text-[24px] sm:leading-6">
         {label}
-      </p>
+      </ScrollRevealText>
     </div>
   );
 }
