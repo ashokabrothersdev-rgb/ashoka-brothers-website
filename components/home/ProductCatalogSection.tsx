@@ -1,10 +1,20 @@
+"use client";
+
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 import { productCatalog } from "@/data/home-page.data";
 
+const EASE = [0.22, 1, 0.36, 1] as const;
+const CATALOG_IMAGE = "/images/products/product-1.webp";
+
 export function ProductCatalogSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+
   return (
     <section
       id="career"
@@ -30,15 +40,27 @@ export function ProductCatalogSection() {
             Products
           </ScrollRevealText>
           <ul className="mt-5 font-canela text-[16px] leading-10 tracking-[0.9px] text-[#282828] sm:mt-7.5 sm:text-[18px]">
-            {productCatalog.map((item, index) => (
-              <ScrollRevealText
-                key={item}
-                as="li"
-                delay={0.12 + index * 0.08}
-              >
-                {item}
-              </ScrollRevealText>
-            ))}
+            {productCatalog.map((item, index) => {
+              const isActive = activeIndex === index;
+
+              return (
+                <ScrollRevealText
+                  key={item}
+                  as="li"
+                  delay={0.12 + index * 0.08}
+                >
+                  <button
+                    type="button"
+                    onMouseEnter={() => setActiveIndex(index)}
+                    onFocus={() => setActiveIndex(index)}
+                    aria-pressed={isActive}
+                    className="w-full cursor-pointer bg-transparent p-0 text-center transition-opacity duration-500 sm:text-left"
+                  >
+                    {item}
+                  </button>
+                </ScrollRevealText>
+              );
+            })}
           </ul>
 
           <Link
@@ -71,14 +93,25 @@ export function ProductCatalogSection() {
         </div>
       </div>
 
-      <div className="relative min-h-90 lg:min-h-158.5">
-        <Image
-          src="/images/products/product-1.webp"
-          alt="Close-up of a precision screw"
-          fill
-          className="object-cover"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
+      <div className="relative min-h-90 overflow-hidden lg:min-h-158.5">
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={activeIndex}
+            className="absolute inset-0"
+            initial={reduceMotion ? false : { opacity: 0, scale: 1.045 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: reduceMotion ? 0 : 0.7, ease: EASE }}
+          >
+            <Image
+              src={CATALOG_IMAGE}
+              alt={productCatalog[activeIndex]}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
