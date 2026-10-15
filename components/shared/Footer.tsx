@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import {
   contactLinks,
   quickLinks,
   socials,
   contactDetails,
 } from "@/data/shared.data";
-import Image from "next/image";
 
 export function Footer() {
   return (
@@ -18,7 +19,7 @@ export function Footer() {
         className="absolute inset-0 size-full object-cover opacity-95"
       />
 
-      <div className="relative mx-auto max-w-384 px-5 pb-10 pt-7 sm:px-10 lg:px-10">
+      <div className="relative mx-auto max-w-384 px-5 pt-7 pb-10 sm:px-10 lg:px-10">
         <Link href="#home" className="inline-block">
           <Image
             src="/icons/logo.svg"
@@ -32,11 +33,14 @@ export function Footer() {
         <div className="mt-6 grid overflow-hidden bg-white lg:grid-cols-[1fr_480px]">
           <div className="grid gap-10 px-6 py-10 sm:grid-cols-2 sm:gap-x-32 sm:px-10 lg:grid-cols-[2.5fr_1.5fr_1.5fr] lg:gap-x-30 lg:px-20 lg:py-16">
             <div>
-              <h3 className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]">
+              <ScrollRevealText
+                as="h3"
+                className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]"
+              >
                 Contact Us
-              </h3>
+              </ScrollRevealText>
               <div className="mt-6 space-y-3 text-[16px] leading-8 text-[#777]">
-                <p className="whitespace-nowrap">
+                <ScrollRevealText delay={0.1} className="whitespace-nowrap">
                   <span className="text-black">Reservations:</span>{" "}
                   <a
                     href={`tel:${contactDetails.phone1}`}
@@ -44,51 +48,62 @@ export function Footer() {
                   >
                     {contactDetails.phone1}
                   </a>
-                </p>
-                <p className="whitespace-nowrap">
+                </ScrollRevealText>
+                <ScrollRevealText delay={0.18} className="whitespace-nowrap">
                   <span className="text-black">Email:</span>{" "}
                   <a href={`mailto:${contactDetails.email}`}>
                     {contactDetails.email}
                   </a>
-                </p>
-                <p>
+                </ScrollRevealText>
+                <ScrollRevealText delay={0.26}>
                   <span className="text-black">Address:</span> 300/6, Loha
                   Mandi, Near
                   <br />
                   Tunda Talab, Amritsar- 143001
-                </p>
+                </ScrollRevealText>
               </div>
             </div>
 
             <div>
-              <h3 className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]">
+              <ScrollRevealText
+                as="h3"
+                className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]"
+              >
                 Quick Links
-              </h3>
+              </ScrollRevealText>
               <ul className="mt-6 space-y-0 text-[16px] leading-8 text-[#777]">
-                {contactLinks.map((item) => (
-                  <li key={item.label}>
+                {contactLinks.map((item, index) => (
+                  <ScrollRevealText
+                    key={item.label}
+                    as="li"
+                    delay={0.1 + index * 0.08}
+                  >
                     <Link
                       href={item.href}
                       className="transition-colors hover:text-[#2b2b2b]"
                     >
                       {item.label}
                     </Link>
-                  </li>
+                  </ScrollRevealText>
                 ))}
               </ul>
             </div>
 
             <div className="sm:col-span-2 lg:col-span-1 lg:pt-13.5">
               <ul className="mt-0 space-y-0 text-[16px] leading-8 text-[#777]">
-                {quickLinks.map((item) => (
-                  <li key={item.label}>
+                {quickLinks.map((item, index) => (
+                  <ScrollRevealText
+                    key={item.label}
+                    as="li"
+                    delay={0.1 + index * 0.08}
+                  >
                     <Link
                       href={item.href}
                       className="transition-colors hover:text-[#2b2b2b]"
                     >
                       {item.label}
                     </Link>
-                  </li>
+                  </ScrollRevealText>
                 ))}
               </ul>
             </div>
