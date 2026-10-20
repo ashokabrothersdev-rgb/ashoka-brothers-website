@@ -71,7 +71,7 @@ export function VisionSection({
           <ScrollRevealText
             as="h2"
             id="our-vision-heading"
-            className="flex items-center gap-4 font-canela text-[32px] leading-none tracking-[1.2px] text-white sm:gap-5 sm:text-[44px] lg:text-[48px] lg:tracking-[1.92px]"
+            className="flex items-center gap-4 font-serif text-[32px] leading-none tracking-[1.2px] text-white sm:gap-5 sm:text-[44px] lg:text-[48px] lg:tracking-[1.92px]"
           >
             {title}
             <ScrewMark
@@ -81,7 +81,7 @@ export function VisionSection({
           </ScrollRevealText>
           <ScrollRevealText
             delay={0.15}
-            className="mt-6 max-w-md font-canela text-balance text-[14px] leading-7 text-white/80 sm:mt-8 sm:text-[17px] sm:leading-8"
+            className="mt-6 max-w-md text-balance text-[14px] leading-7 text-white/80 sm:mt-8 sm:text-[17px] sm:leading-8"
           >
             {description}
           </ScrollRevealText>

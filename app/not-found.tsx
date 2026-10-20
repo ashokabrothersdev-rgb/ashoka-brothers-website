@@ -27,7 +27,7 @@ export default function NotFound() {
       <div className="pointer-events-none absolute inset-0 bg-black/55" />
 
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-5 py-32 text-center">
-        <ScrollRevealText className="font-canela text-[88px] leading-none tracking-[0.06em] text-gold sm:text-[140px]">
+        <ScrollRevealText className="font-serif text-[88px] leading-none tracking-[0.06em] text-gold sm:text-[140px]">
           404
         </ScrollRevealText>
 
@@ -36,7 +36,7 @@ export default function NotFound() {
           <ScrollRevealText
             as="h1"
             delay={0.1}
-            className="font-canela text-[28px] leading-10 tracking-[1.92px] text-white sm:text-[48px] sm:leading-15"
+            className="font-serif text-[28px] leading-10 tracking-[1.92px] text-white sm:text-[48px] sm:leading-15"
           >
             Page Not Found
           </ScrollRevealText>
@@ -45,7 +45,7 @@ export default function NotFound() {
 
         <ScrollRevealText
           delay={0.2}
-          className="mt-6 max-w-md font-canela text-[14px] leading-7 text-white/80 sm:text-[17px]"
+          className="mt-6 max-w-md text-[14px] leading-7 text-white/80 sm:text-[17px]"
         >
           This page has come loose. The link may be broken, or the page may have
           moved.

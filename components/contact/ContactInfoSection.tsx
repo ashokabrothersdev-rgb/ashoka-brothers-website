@@ -14,7 +14,7 @@ export function ContactInfoSection() {
           <ScrewMark size={13} className="sm:mt-4" />
           <ScrollRevealText
             as="h2"
-            className="font-canela text-[22px] leading-15 tracking-[4%] text-white/80 sm:text-[48px]"
+            className="font-serif text-[22px] leading-15 tracking-[4%] text-white/80 sm:text-[48px]"
           >
             Contact Ashoka Brothers
           </ScrollRevealText>
@@ -36,7 +36,7 @@ export function ContactInfoSection() {
             <div className="flex flex-1 flex-col justify-center lg:py-12">
               <ScrollRevealText
                 as="h3"
-                className="font-canela text-[24px] leading-8 tracking-[1px] text-white max-md:hidden sm:text-[40px] sm:leading-10"
+                className="font-serif text-[24px] leading-8 tracking-[1px] text-white max-md:hidden sm:text-[40px] sm:leading-10"
               >
                 Contact Us
               </ScrollRevealText>

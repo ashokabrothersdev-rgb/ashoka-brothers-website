@@ -80,7 +80,7 @@ export function BlogArticle({ blog }: { blog: Blog }) {
     middleImage2 ? { src: middleImage2, alt: middleImage2Alt ?? "" } : null,
   ].filter((image): image is { src: string; alt: string } => image !== null);
   const copyClassName =
-    "mx-auto max-w-234 space-y-2 font-canela text-[15px] leading-7 text-[#282828] sm:text-[17px] sm:leading-8.5";
+    "mx-auto max-w-234 space-y-2 text-[15px] leading-7 text-[#282828] sm:text-[17px] sm:leading-8.5";
 
   return (
     <article>
@@ -104,7 +104,7 @@ export function BlogArticle({ blog }: { blog: Blog }) {
               <ScrewMark size={13} className="shrink-0" />
               <ScrollRevealText
                 as="h1"
-                className="min-w-0 font-canela text-[26px] leading-10 text-balance tracking-[1px] text-[#282828] sm:text-[40px] sm:leading-13 lg:text-[48px] lg:leading-15 lg:tracking-[1.92px]"
+                className="min-w-0 font-serif text-[26px] leading-10 text-balance tracking-[1px] text-[#282828] sm:text-[40px] sm:leading-13 lg:text-[48px] lg:leading-15 lg:tracking-[1.92px]"
               >
                 {intro.sectionTitle}
               </ScrollRevealText>
@@ -122,7 +122,7 @@ export function BlogArticle({ blog }: { blog: Blog }) {
             <section className="mt-8 lg:mt-12.5">
               <ScrollRevealText
                 as="h2"
-                className="font-canela text-[22px] leading-8 text-balance tracking-[0.8px] text-[#282828] sm:text-[30px] sm:leading-11.25 sm:tracking-[1.2px]"
+                className="font-serif text-[22px] leading-8 text-balance tracking-[0.8px] text-[#282828] sm:text-[30px] sm:leading-11.25 sm:tracking-[1.2px]"
               >
                 {section.sectionTitle}
               </ScrollRevealText>

@@ -35,7 +35,7 @@ export function Footer() {
             <div>
               <ScrollRevealText
                 as="h3"
-                className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]"
+                className="font-serif text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]"
               >
                 Contact Us
               </ScrollRevealText>
@@ -67,7 +67,7 @@ export function Footer() {
             <div>
               <ScrollRevealText
                 as="h3"
-                className="font-canela text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]"
+                className="font-serif text-[20px] leading-7.5 tracking-[1px] text-[#2b2b2b]"
               >
                 Quick Links
               </ScrollRevealText>

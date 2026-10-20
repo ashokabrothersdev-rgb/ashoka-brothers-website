@@ -267,7 +267,7 @@ export function OurProductsSection() {
         <div className="text-white sm:px-5">
           <ScrollRevealText
             as="h2"
-            className="flex items-center gap-7.5 font-canela text-[28px] leading-15 tracking-[1.92px] sm:text-[48px]"
+            className="flex items-center gap-7.5 font-serif text-[28px] leading-15 tracking-[1.92px] sm:text-[48px]"
           >
             Our Products
             <ScrewMark
@@ -277,7 +277,7 @@ export function OurProductsSection() {
           </ScrollRevealText>
           <ScrollRevealText
             delay={0.15}
-            className="mt-4 font-canela text-[14px] leading-7 sm:mt-7.5 sm:text-[16px] sm:leading-8.5"
+            className="mt-4 text-[14px] leading-7 sm:mt-7.5 sm:text-[16px] sm:leading-8.5"
           >
             From precision screws and dependable bolts to nuts, hooks and
             fastening essentials, Ashoka Brothers offers a reliable range built

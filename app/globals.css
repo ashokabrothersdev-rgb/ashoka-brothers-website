@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Canela Trial";
-  src: url("/fonts/CanelaText-Light-Trial.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #282828;
@@ -23,7 +16,8 @@
   --color-gold-button: var(--gold-button);
   --color-gold-panel: var(--gold-panel);
   --color-ink: var(--ink);
-  --font-sans: var(--font-figtree);
+  --font-sans: var(--font-quicksand), Arial, Helvetica, sans-serif;
+  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
 }
 
 html {
@@ -33,24 +27,12 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-figtree), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
 ::selection {
   background: #f5db3e;
   color: #101010;
-}
-
-.font-canela {
-  font-family: "Canela Trial", sans-serif;
-}
-
-.font-gilda {
-  font-family: var(--font-gilda), Georgia, serif;
-}
-
-.font-jost {
-  font-family: var(--font-jost), Arial, Helvetica, sans-serif;
 }
 
 @keyframes testimonial-marquee {

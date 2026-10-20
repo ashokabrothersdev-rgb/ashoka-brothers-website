@@ -9,13 +9,13 @@ export function ProductGridSection() {
 
       <ScrollRevealText
         as="p"
-        className="pointer-events-none absolute top-10 left-7 select-none font-canela text-[50px] leading-none font-semibold tracking-[5%] text-[#5D5D5D]/50 uppercase sm:text-[140px] md:left-65 lg:top-14.5 lg:text-[150px]"
+        className="pointer-events-none absolute top-10 left-7 select-none font-serif text-[50px] leading-none font-semibold tracking-[5%] text-[#5D5D5D]/50 uppercase sm:text-[140px] md:left-65 lg:top-14.5 lg:text-[150px]"
         aria-hidden
       >
         Products
       </ScrollRevealText>
 
-      <div className="relative mx-auto grid max-w-381.5 grid-cols-1 gap-x-6 gap-y-10 px-5 pt-21 pb-16 sm:px-10 sm:pt-24 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-20 lg:px-16 lg:pt-45 lg:pb-25">
+      <div className="relative mx-auto grid max-w-381.5 grid-cols-1 gap-x-6 gap-y-10 px-5 pt-19 pb-16 sm:px-10 sm:pt-24 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-20 lg:px-16 lg:pt-40 lg:pb-25">
         {productCards.map((product, index) => (
           <ProductCard
             key={`${product.name}-${index}`}
@@ -79,7 +79,7 @@ function ProductCard({ product, index }: ProductCardProps) {
       <ScrollRevealText
         as="h3"
         delay={0.1}
-        className={`mt-2.5 font-canela text-[24px] leading-7.5 md:mt-4 sm:text-[28px] ${nameTone}`}
+        className={`mt-2.5 font-serif text-[24px] leading-7.5 md:mt-4 sm:text-[28px] ${nameTone}`}
       >
         {product.name}
       </ScrollRevealText>

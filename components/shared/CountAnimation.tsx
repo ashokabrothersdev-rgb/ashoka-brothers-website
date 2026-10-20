@@ -38,7 +38,7 @@ export function CountAnimation({
 
   return (
     <div ref={ref} className="flex flex-col items-center text-center">
-      <p className="font-jost font-bold text-[#ffc30b]">
+      <p className="font-sans font-bold text-[#ffc30b]">
         <span className="text-[38px] leading-none sm:text-[120px] lg:text-[172px] ">
           {display}
         </span>
@@ -46,7 +46,7 @@ export function CountAnimation({
           {suffix}
         </span>
       </p>
-      <ScrollRevealText className="font-jost font-normal text-[14px] leading-5 text-[#272626] sm:text-[24px] sm:leading-6">
+      <ScrollRevealText className="font-sans font-normal text-[14px] leading-5 text-[#272626] sm:text-[24px] sm:leading-6">
         {label}
       </ScrollRevealText>
     </div>

@@ -1,25 +1,21 @@
 import type { Metadata } from "next";
-import { Figtree, Gilda_Display, Jost } from "next/font/google";
+import { Quicksand, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 
-const figtree = Figtree({
-  variable: "--font-figtree",
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
-  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
-const gilda = Gilda_Display({
-  variable: "--font-gilda",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
-  weight: ["400"],
-});
-
-const jost = Jost({
-  variable: "--font-jost",
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${figtree.variable} ${gilda.variable} ${jost.variable} h-full antialiased scroll-smooth`}
+      className={`${quicksand.variable} ${sourceSerif.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full overflow-x-hidden bg-white text-[#282828]">
         <Navbar />

@@ -8,7 +8,7 @@ export function RangeOfProductsSection() {
       <div className="relative mx-auto max-w-384 px-5">
         <ScrollRevealText
           as="h2"
-          className="text-center font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
+          className="text-center font-serif text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
         >
           Range of Products
         </ScrollRevealText>
@@ -30,7 +30,7 @@ export function RangeOfProductsSection() {
               />
               <ScrollRevealText
                 delay={0.1 + index * 0.1}
-                className="mt-5 font-canela text-[24px] leading-8.5 text-[#282828] sm:text-[30px]"
+                className="mt-5 font-serif text-[24px] leading-8.5 text-[#282828] sm:text-[30px]"
               >
                 {item.label}
               </ScrollRevealText>

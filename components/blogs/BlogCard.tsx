@@ -24,13 +24,13 @@ export function BlogCard({ blog }: { blog: Blog }) {
       <div className="flex flex-1 flex-col gap-5 p-5 sm:gap-7.5 sm:p-7.5">
         <ScrollRevealText
           as="h3"
-          className="font-canela text-[22px] leading-7 tracking-[0.5px] text-[#282828] sm:text-[30px] sm:leading-8"
+          className="font-serif text-[22px] leading-7 tracking-[0.5px] text-[#282828] sm:text-[30px] sm:leading-8"
         >
           {blog.title}
         </ScrollRevealText>
         <ScrollRevealText
           delay={0.12}
-          className="line-clamp-2 font-jost text-[14px] leading-5 text-[#282828] sm:text-[16px] sm:leading-5.5"
+          className="line-clamp-2 font-sans text-[14px] leading-5 text-[#282828] sm:text-[16px] sm:leading-5.5"
         >
           {blog.description}
         </ScrollRevealText>

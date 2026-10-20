@@ -44,7 +44,7 @@ export function TestimonialsSection() {
     <section id="testimonials" className="py-16 lg:py-25">
       <ScrollRevealText
         as="h2"
-        className="text-center font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
+        className="text-center font-serif text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
       >
         Testimonials
       </ScrollRevealText>

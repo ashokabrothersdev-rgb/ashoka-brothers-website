@@ -25,7 +25,7 @@ export function AboutSection({
           <ScrewMark size={13} className="sm:mt-4" />
           <ScrollRevealText
             as="h2"
-            className="font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
+            className="font-serif text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
           >
             {title}
           </ScrollRevealText>
@@ -34,7 +34,7 @@ export function AboutSection({
 
         <ScrollRevealText
           delay={0.15}
-          className="font-canela text-[14px] leading-7 text-[#282828] sm:text-[17px]"
+          className="text-[14px] leading-7 text-[#282828] sm:text-[17px]"
         >
           {description}
         </ScrollRevealText>

@@ -100,12 +100,12 @@ export function DriveItHomeSection() {
                   exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.4, ease: EASE }}
                 >
-                  <h2 className="font-canela text-[28px] leading-10 font-semibold tracking-[1.2px] sm:text-[30px]">
+                  <h2 className="font-serif text-[28px] leading-10 font-semibold tracking-[1.2px] sm:text-[30px]">
                     {current.title.first}
                     <br />
                     {current.title.second}
                   </h2>
-                  <p className="mt-6 font-canela text-[14px] leading-5 font-light opacity-80">
+                  <p className="mt-6 text-[14px] leading-5 font-light opacity-80">
                     {current.description.first}
                     <br />
                     {current.description.second}

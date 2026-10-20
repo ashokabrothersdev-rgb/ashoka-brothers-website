@@ -41,7 +41,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           className="size-16 rounded-full object-cover"
         />
         <div>
-          <p className="font-gilda text-[16px] leading-4 text-[#2b2b2b]">
+          <p className="font-serif text-[16px] leading-4 text-[#2b2b2b]">
             {testimonial.name}
           </p>
           <p className="mt-2 text-[14px] leading-3.5 text-[#4a5565]">

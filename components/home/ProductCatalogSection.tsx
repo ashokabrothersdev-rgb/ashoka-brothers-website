@@ -35,11 +35,11 @@ export function ProductCatalogSection() {
         <div>
           <ScrollRevealText
             as="h2"
-            className="font-canela text-[28px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px]"
+            className="font-serif text-[28px] leading-12 tracking-[1.92px] text-[#282828] sm:text-[48px]"
           >
             Products
           </ScrollRevealText>
-          <ul className="mt-5 font-canela text-[16px] leading-10 tracking-[0.9px] text-[#282828] sm:mt-7.5 sm:text-[18px]">
+          <ul className="mt-5 text-[16px] leading-10 tracking-[0.9px] text-[#282828] sm:mt-7.5 sm:text-[18px]">
             {productCatalog.map((item, index) => {
               const isActive = activeIndex === index;
 
@@ -72,7 +72,7 @@ export function ProductCatalogSection() {
               aria-hidden
               className="pointer-events-none absolute inset-0 translate-x-0.75 translate-y-[3.5px] rounded-xs border-r border-b border-[#101010]"
             />
-            <span className="relative z-10 flex items-center gap-3 font-canela text-[14px] leading-5 tracking-[0.04em] text-white uppercase sm:text-[16px] sm:leading-6.5">
+            <span className="relative z-10 flex items-center gap-3 text-[14px] leading-5 tracking-[0.04em] text-white uppercase sm:text-[16px] sm:leading-6.5">
               <svg
                 width="15"
                 height="12"
