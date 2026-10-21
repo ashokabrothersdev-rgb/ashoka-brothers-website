@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 import type { Blog } from "@/data/blogs-page.data";
 
@@ -14,34 +15,72 @@ function ArticleCopy({
 }) {
   return (
     <div className={className}>
-      <p>{section.sectionContent}</p>
+      <ScrollRevealText>{section.sectionContent}</ScrollRevealText>
       {section.sectionSecondaryContent ? (
-        <p>{section.sectionSecondaryContent}</p>
+        <ScrollRevealText delay={0.12}>
+          {section.sectionSecondaryContent}
+        </ScrollRevealText>
       ) : null}
     </div>
   );
 }
 
-function MiddleImage({ src, alt }: { src: string; alt: string }) {
+function MiddleImages({ images }: { images: { src: string; alt: string }[] }) {
+  if (images.length === 0) return null;
+
+  const paired = images.length > 1;
+
   return (
-    <figure className="relative mx-auto mt-12 aspect-3/2 w-full max-w-234 overflow-hidden lg:mt-14">
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover object-center"
-        sizes="(max-width: 1024px) 100vw, 936px"
-      />
-    </figure>
+    <div
+      className={
+        paired
+          ? "mx-auto mt-12 flex w-full max-w-234 flex-col gap-5 lg:mt-14 lg:w-fit lg:max-w-none lg:flex-row lg:gap-4"
+          : "mx-auto mt-12 w-full max-w-234 lg:mt-14"
+      }
+    >
+      {images.map((image) => (
+        <figure
+          key={image.src}
+          className={
+            paired
+              ? "relative aspect-square w-full overflow-hidden lg:size-115 lg:shrink-0"
+              : "relative aspect-3/2 w-full overflow-hidden"
+          }
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover object-center"
+            sizes={
+              paired
+                ? "(max-width: 1024px) 100vw, 460px"
+                : "(max-width: 1024px) 100vw, 936px"
+            }
+          />
+        </figure>
+      ))}
+    </div>
   );
 }
 
 export function BlogArticle({ blog }: { blog: Blog }) {
-  const { mainImage, mainImageAlt, middleImage, middleImageAlt, content } =
-    blog;
+  const {
+    mainImage,
+    mainImageAlt,
+    middleImage,
+    middleImageAlt,
+    middleImage2,
+    middleImage2Alt,
+    content,
+  } = blog;
   const [intro, ...sections] = content;
+  const middleImages = [
+    middleImage ? { src: middleImage, alt: middleImageAlt } : null,
+    middleImage2 ? { src: middleImage2, alt: middleImage2Alt ?? "" } : null,
+  ].filter((image): image is { src: string; alt: string } => image !== null);
   const copyClassName =
-    "mx-auto max-w-234 space-y-2 font-canela text-[15px] leading-7 text-[#282828] sm:text-[17px] sm:leading-8.5";
+    "mx-auto max-w-234 space-y-2 text-[15px] leading-7 text-[#282828] sm:text-[17px] sm:leading-8.5";
 
   return (
     <article>
@@ -63,9 +102,12 @@ export function BlogArticle({ blog }: { blog: Blog }) {
           <header>
             <div className="mx-auto flex max-w-270 items-center justify-center gap-3 sm:gap-7.5">
               <ScrewMark size={13} className="shrink-0" />
-              <h1 className="min-w-0 font-canela text-[26px] text-balance leading-10 tracking-[1px] text-[#282828] sm:text-[40px] sm:leading-13 lg:text-[48px] lg:leading-15 lg:tracking-[1.92px]">
+              <ScrollRevealText
+                as="h1"
+                className="min-w-0 font-serif text-[26px] leading-10 text-balance tracking-[1px] text-[#282828] sm:text-[40px] sm:leading-13 lg:text-[48px] lg:leading-15 lg:tracking-[1.92px]"
+              >
                 {intro.sectionTitle}
-              </h1>
+              </ScrollRevealText>
               <ScrewMark size={13} className="shrink-0" />
             </div>
             <ArticleCopy
@@ -78,22 +120,25 @@ export function BlogArticle({ blog }: { blog: Blog }) {
         {sections.map((section, index) => (
           <Fragment key={`${section.sectionTitle}-${index}`}>
             <section className="mt-8 lg:mt-12.5">
-              <h2 className="font-canela text-[22px] text-balance leading-8 tracking-[0.8px] text-[#282828] sm:text-[30px] sm:leading-11.25 sm:tracking-[1.2px]">
+              <ScrollRevealText
+                as="h2"
+                className="font-serif text-[22px] leading-8 text-balance tracking-[0.8px] text-[#282828] sm:text-[30px] sm:leading-11.25 sm:tracking-[1.2px]"
+              >
                 {section.sectionTitle}
-              </h2>
+              </ScrollRevealText>
               <ArticleCopy
                 section={section}
                 className={`${copyClassName} mt-5`}
               />
             </section>
-            {middleImage && index === 0 ? (
-              <MiddleImage src={middleImage} alt={middleImageAlt} />
+            {middleImages.length > 0 && index === 0 ? (
+              <MiddleImages images={middleImages} />
             ) : null}
           </Fragment>
         ))}
 
-        {middleImage && sections.length === 0 ? (
-          <MiddleImage src={middleImage} alt={middleImageAlt} />
+        {middleImages.length > 0 && sections.length === 0 ? (
+          <MiddleImages images={middleImages} />
         ) : null}
       </div>
     </article>

@@ -1,5 +1,6 @@
 import { AboutDescriptionToggle } from "@/components/shared/AboutDescriptionToggle";
 import { ReadMoreButton } from "@/components/shared/ReadMoreButton";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 
 interface AboutSectionProps {
@@ -22,15 +23,21 @@ export function AboutSection({
       <div className="mx-auto max-w-300 px-5 text-center">
         <div className="mb-7.5 flex items-center justify-center gap-7.5">
           <ScrewMark size={13} className="sm:mt-4" />
-          <h2 className="font-canela text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]">
+          <ScrollRevealText
+            as="h2"
+            className="font-serif text-[28px] leading-15 tracking-[1.92px] text-[#282828] sm:text-[48px]"
+          >
             {title}
-          </h2>
+          </ScrollRevealText>
           <ScrewMark size={13} className="sm:mt-4" />
         </div>
 
-        <p className="font-canela text-[14px] leading-7 text-[#282828] sm:text-[17px]">
+        <ScrollRevealText
+          delay={0.15}
+          className="text-[14px] leading-7 text-[#282828] sm:text-[17px]"
+        >
           {description}
-        </p>
+        </ScrollRevealText>
 
         {readMoreDescription ? (
           <AboutDescriptionToggle

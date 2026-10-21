@@ -40,7 +40,7 @@ export function AboutDescriptionToggle({
               delay: expanded && !reduceMotion ? 0.06 : 0,
               ease: EASE,
             }}
-            className="pt-5 font-canela text-[14px] leading-7 text-[#282828] sm:text-[17px]"
+            className="pt-5 text-[14px] leading-7 text-[#282828] sm:text-[17px]"
           >
             {readMoreDescription}
           </motion.p>

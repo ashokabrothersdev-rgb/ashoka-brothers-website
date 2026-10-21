@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { productCards, type ProductCard } from "@/data/products-page.data";
 
 export function ProductGridSection() {
@@ -6,14 +7,15 @@ export function ProductGridSection() {
     <section id="products" className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[23%] bg-black sm:h-[55%] lg:h-[calc(100%-23rem)]" />
 
-      <p
+      <ScrollRevealText
+        as="p"
+        className="pointer-events-none absolute top-10 left-7 select-none font-serif text-[50px] leading-none font-semibold tracking-[5%] text-[#5D5D5D]/50 uppercase sm:text-[140px] md:left-65 lg:top-14.5 lg:text-[150px]"
         aria-hidden
-        className="pointer-events-none absolute font-semibold top-10 md:left-65 left-7 font-canela text-[50px] leading-none tracking-[5%] text-[#5D5D5D]/50 uppercase select-none sm:text-[140px] lg:top-14.5 lg:text-[150px]"
       >
         Products
-      </p>
+      </ScrollRevealText>
 
-      <div className="relative mx-auto grid max-w-381.5 grid-cols-1 gap-x-6 gap-y-10 px-5 pt-21 pb-16 sm:px-10 sm:pt-24 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-20 lg:px-16 lg:pt-45 lg:pb-25">
+      <div className="relative mx-auto grid max-w-381.5 grid-cols-1 gap-x-6 gap-y-10 px-5 pt-19 pb-16 sm:px-10 sm:pt-24 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-20 lg:px-16 lg:pt-40 lg:pb-25">
         {productCards.map((product, index) => (
           <ProductCard
             key={`${product.name}-${index}`}
@@ -69,16 +71,18 @@ function ProductCard({ product, index }: ProductCardProps) {
         )}
       </div>
 
-      <p
+      <ScrollRevealText
         className={`mt-5 font-sans text-[12px] leading-2.5 tracking-[0.16em] uppercase ${categoryTone}`}
       >
         {product.category}
-      </p>
-      <h3
-        className={`md:mt-4 mt-2.5 font-canela text-[24px] leading-7.5 sm:text-[28px] ${nameTone}`}
+      </ScrollRevealText>
+      <ScrollRevealText
+        as="h3"
+        delay={0.1}
+        className={`mt-2.5 font-serif text-[24px] leading-7.5 md:mt-4 sm:text-[28px] ${nameTone}`}
       >
         {product.name}
-      </h3>
+      </ScrollRevealText>
     </article>
   );
 }

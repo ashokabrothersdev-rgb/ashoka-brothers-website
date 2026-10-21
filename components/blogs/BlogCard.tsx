@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { type Blog } from "@/data/blogs-page.data";
 
 export function BlogCard({ blog }: { blog: Blog }) {
@@ -14,19 +15,25 @@ export function BlogCard({ blog }: { blog: Blog }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute inset-x-0 bottom-0 bg-[#FAF7F2]/20 px-4 py-2 sm:px-5">
-          <span className=" text-[14px] leading-none tracking-[0.14em] text-white uppercase">
+          <span className="text-[14px] leading-none tracking-[0.14em] text-white uppercase">
             Blog
           </span>
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-7.5 gap-5 sm:gap-7.5">
-        <h3 className="font-canela text-[22px] leading-7 tracking-[0.5px] text-[#282828] sm:text-[30px] sm:leading-8">
+      <div className="flex flex-1 flex-col gap-5 p-5 sm:gap-7.5 sm:p-7.5">
+        <ScrollRevealText
+          as="h3"
+          className="font-serif text-[22px] leading-7 tracking-[0.5px] text-[#282828] sm:text-[30px] sm:leading-8"
+        >
           {blog.title}
-        </h3>
-        <p className="line-clamp-2 font-jost text-[14px] leading-5 text-[#282828] sm:text-[16px] sm:leading-5.5">
+        </ScrollRevealText>
+        <ScrollRevealText
+          delay={0.12}
+          className="line-clamp-2 font-sans text-[14px] leading-5 text-[#282828] sm:text-[16px] sm:leading-5.5"
+        >
           {blog.description}
-        </p>
+        </ScrollRevealText>
 
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-3.5">

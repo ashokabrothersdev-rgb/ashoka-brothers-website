@@ -3,7 +3,7 @@ export const links = [
   { href: "/products", label: "Products" },
   { href: "/about-us", label: "Our Story" },
   { href: "/blogs", label: "Blogs" },
-  { href: "/media", label: "Media" },
+  // { href: "/media", label: "Media" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 
@@ -16,7 +16,7 @@ const contactLinks = [
 
 const quickLinks = [
   { href: "/blogs", label: "Blogs" },
-  { href: "/media", label: "Media" },
+  // { href: "/media", label: "Media" },
   { href: "/contact-us", label: "Contact Us" },
   { href: "/terms-and-conditions", label: "Terms & Conditions" },
 ];
