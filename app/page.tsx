@@ -1,4 +1,4 @@
-import { MunniHome } from "@/components/home/munni/MunniHome";
+import { MunniHome } from "@/components/home/MunniHome";
 
 export default function Home() {
   return <MunniHome />;
