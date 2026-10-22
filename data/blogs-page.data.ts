@@ -10,7 +10,6 @@ export interface Blog {
   middleImage2?: string;
   middleImage2Alt?: string;
   author: string;
-  authorImage: string;
   date: string;
   content: {
     sectionTitle: string;
@@ -27,7 +26,6 @@ export const blogs: Blog[] = [
       "Understanding Screw Technology - Explore the basics of screw design, thread types and materials..",
     thumbnail: "/images/blogs/thumbnail-1.png",
     author: "Ashoka Brothers",
-    authorImage: "/images/testimonial-1.png",
     date: "Oct 14, 2026",
     mainImage: "/images/blogs/main-image-1.png",
     mainImageAlt: "Main Image 1",
@@ -68,7 +66,6 @@ export const blogs: Blog[] = [
       "A Guide to Better Installation - Learn the essential practices for selecting, positioning and installing..",
     thumbnail: "/images/blogs/thumbnail-2.png",
     author: "Ashoka Brothers",
-    authorImage: "/images/testimonial-1.png",
     date: "Oct 14, 2026",
     mainImage: "/images/blogs/main-image-2.png",
     mainImageAlt: "Main Image 2",
@@ -110,7 +107,6 @@ export const blogs: Blog[] = [
       "Choosing the Right Fastener for the Job - Different materials and applications demand different..",
     thumbnail: "/images/blogs/thumbnail-3.png",
     author: "Ashoka Brothers",
-    authorImage: "/images/testimonial-1.png",
     date: "Oct 14, 2026",
     mainImage: "/images/blogs/main-image-3.png",
     mainImageAlt: "Main Image 3",
