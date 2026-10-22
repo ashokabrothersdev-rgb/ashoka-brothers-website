@@ -25,7 +25,7 @@ export const productCards: ProductCard[] = [
     name: "Drywall Screw",
     category: "Screws",
     src: "/images/products/product-9.webp",
-    alt: "A cluster of drywall screws on wood",
+    alt: "A black drywall screw on a grey board",
     hasInnerBorder: false,
   },
   {
@@ -134,39 +134,32 @@ export const productCards: ProductCard[] = [
     hasInnerBorder: true,
   },
   {
-    name: "Drywall Screw",
-    category: "Screw",
-    src: "/images/products/product-25.webp",
-    alt: "Four black drywall screws arranged diagonally",
-    hasInnerBorder: false,
-  },
-  {
     name: "Chipboard Screw",
     category: "Screw",
     src: "/images/products/product-26.webp",
     alt: "Silver chipboard screws standing and lying on a light surface",
-    hasInnerBorder: true,
+    hasInnerBorder: false,
   },
   {
     name: "Coach Screw",
     category: "Screw",
     src: "/images/products/product-27.webp",
     alt: "Dark coach screws of various sizes on a white background",
-    hasInnerBorder: false,
+    hasInnerBorder: true,
   },
   {
     name: "Hook",
     category: "Hook",
     src: "/images/products/product-28.webp",
     alt: "Silver screw eye and cup hook on a light background",
-    hasInnerBorder: true,
+    hasInnerBorder: false,
   },
   {
     name: "Golden Polish Machine Screw",
     category: "Screw",
     src: "/images/products/product-29.webp",
     alt: "A gold-polished slotted machine screw lying horizontally",
-    hasInnerBorder: false,
+    hasInnerBorder: true,
   },
 ];
 

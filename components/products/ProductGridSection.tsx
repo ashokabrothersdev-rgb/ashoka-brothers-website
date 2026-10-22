@@ -1,11 +1,17 @@
 import Image from "next/image";
+import { SizeCharts } from "@/components/products/SizeCharts";
 import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { productCards, type ProductCard } from "@/data/products-page.data";
 
+// The black band ends halfway down the first card that sits on white, so it
+// follows the cards at every width. One column: the sixth card. Three
+// columns: the start of the last row.
+const FIRST_LIGHT_CARD = 5;
+const FIRST_LIGHT_CARD_LG = Math.floor((productCards.length - 1) / 3) * 3;
+
 export function ProductGridSection() {
   return (
-    <section id="products" className="relative overflow-hidden bg-white">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[23%] bg-black sm:h-[55%] lg:h-[calc(100%-23rem)]" />
+    <section id="products" className="relative isolate overflow-hidden bg-white">
 
       <ScrollRevealText
         as="p"
@@ -15,7 +21,11 @@ export function ProductGridSection() {
         Products
       </ScrollRevealText>
 
-      <div className="relative mx-auto grid max-w-381.5 grid-cols-1 gap-x-6 gap-y-10 px-5 pt-19 pb-16 sm:px-10 sm:pt-24 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-20 lg:px-16 lg:pt-40 lg:pb-25">
+      <div className="relative mx-auto max-w-381.5 px-5 pt-28 sm:px-10 sm:pt-52 lg:px-16 lg:pt-56">
+        <SizeCharts />
+      </div>
+
+      <div className="relative mx-auto grid max-w-381.5 grid-cols-1 gap-x-6 gap-y-10 px-5 pt-12 pb-16 sm:px-10 sm:pt-14 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-20 lg:px-16 lg:pt-16 lg:pb-25">
         {productCards.map((product, index) => (
           <ProductCard
             key={`${product.name}-${index}`}
@@ -34,22 +44,26 @@ type ProductCardProps = {
 };
 
 function ProductCard({ product, index }: ProductCardProps) {
-  const onLightMobile = index >= 5;
-  const onLightFromSm = index >= 21;
-  const categoryTone = onLightFromSm
-    ? "text-[#a8906a]"
-    : onLightMobile
-      ? "text-[#a8906a] sm:text-[#C9A74F]"
-      : "text-[#C9A74F]";
-  const nameTone = onLightFromSm
-    ? "text-[#282828]"
-    : onLightMobile
-      ? "text-[#282828] sm:text-white"
-      : "text-white";
+  const onLight = index >= FIRST_LIGHT_CARD;
+  const onLightLg = index >= FIRST_LIGHT_CARD_LG;
+  const categoryTone = `${onLight ? "text-[#a8906a]" : "text-[#C9A74F]"} ${onLightLg ? "lg:text-[#a8906a]" : "lg:text-[#C9A74F]"}`;
+  const nameTone = `${onLight ? "text-[#282828]" : "text-white"} ${onLightLg ? "lg:text-[#282828]" : "lg:text-white"}`;
+  const bandEnd =
+    index === FIRST_LIGHT_CARD_LG
+      ? "max-lg:hidden"
+      : index === FIRST_LIGHT_CARD
+        ? "lg:hidden"
+        : null;
 
   return (
     <article>
       <div className="relative aspect-square">
+        {bandEnd && (
+          <span
+            aria-hidden
+            className={`pointer-events-none absolute -inset-x-[100vw] -top-[20000px] bottom-1/2 -z-10 bg-black ${bandEnd}`}
+          />
+        )}
         <Image
           src={product.src}
           alt={product.alt}
