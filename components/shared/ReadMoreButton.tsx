@@ -5,6 +5,8 @@ type ReadMoreButtonProps = {
   text: string;
   onClick?: () => void;
   expanded?: boolean;
+  /** Open the link in a new tab, e.g. for an external map. */
+  newTab?: boolean;
 };
 
 export function ReadMoreButton({
@@ -12,6 +14,7 @@ export function ReadMoreButton({
   text,
   onClick,
   expanded,
+  newTab,
 }: ReadMoreButtonProps) {
   const className =
     "group relative inline-flex h-12 cursor-pointer items-center justify-center bg-transparent px-7.5";
@@ -46,7 +49,11 @@ export function ReadMoreButton({
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link
+      href={href}
+      className={className}
+      {...(newTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
       {content}
     </Link>
   );

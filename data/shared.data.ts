@@ -40,7 +40,7 @@ const socials = [
     label: "Twitter",
     size: 36,
   },
-  { href: "/", src: "/icons/location.svg", label: "Location", size: 36 },
+  { href: "/location", src: "/icons/location.svg", label: "Location", size: 36 },
 ];
 
 interface ContactDetails {

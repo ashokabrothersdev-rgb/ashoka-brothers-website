@@ -42,7 +42,7 @@ export function Footer() {
               </ScrollRevealText>
               <div className="mt-6 space-y-3 text-[16px] leading-8 text-[#777]">
                 <ScrollRevealText delay={0.1} className="whitespace-nowrap">
-                  <span className="text-black">Reservations:</span>{" "}
+                  <span className="text-black">Phone:</span>{" "}
                   <a
                     href={`tel:${contactDetails.phone1}`}
                     className="underline decoration-[6.5%]"

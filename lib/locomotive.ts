@@ -40,3 +40,20 @@ export function subscribeLoco(
   listener(current);
   return () => listeners.delete(listener);
 }
+
+/**
+ * Scroll smoothly to an element. Locomotive only handles this while it moves
+ * the page with transforms (smooth mode); on phones and with reduced motion
+ * the page scrolls natively, where its scrollTo stops short of the target.
+ */
+export function scrollToElement(target: HTMLElement, offset = 0) {
+  const smooth =
+    document.documentElement.classList.contains("has-scroll-smooth");
+  if (current && smooth) {
+    current.start();
+    current.scrollTo(target, { offset, duration: 900 });
+    return;
+  }
+  const top = target.getBoundingClientRect().top + window.scrollY + offset;
+  window.scrollTo({ top, behavior: "smooth" });
+}
