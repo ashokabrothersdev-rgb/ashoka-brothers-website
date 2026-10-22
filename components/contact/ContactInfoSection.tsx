@@ -14,26 +14,29 @@ export function ContactInfoSection() {
           <ScrewMark size={13} className="sm:mt-4" />
           <ScrollRevealText
             as="h2"
-            className="font-serif text-[22px] leading-15 tracking-[4%] text-white/80 sm:text-[48px]"
+            className="font-serif text-[22px] leading-15 tracking-[4%] text-white/80 max-[389px]:text-[20px] sm:text-[36px] md:text-[40px] lg:text-[48px]"
           >
             Contact Ashoka Brothers
           </ScrollRevealText>
           <ScrewMark size={13} className="sm:mt-4" />
         </div>
 
-        <div className="relative h-82.5 border-5 border-[#EBC533]/50 md:border-10 lg:h-155">
-          <div className="flex h-full flex-col items-center justify-center gap-8 p-5 sm:p-8 lg:flex-row lg:justify-start lg:gap-15 lg:p-0 lg:pr-15">
-            <div className="relative h-40 w-67.5 shrink-0 overflow-hidden max-md:-mt-20 lg:-ml-20 lg:h-125 lg:w-216">
+        <div className="relative border-5 border-[#EBC533]/50 md:border-10 lg:h-155">
+          <div className="flex flex-col gap-8 px-5 pb-8 sm:gap-10 sm:px-10 sm:pb-12 lg:h-full lg:flex-row lg:items-center lg:gap-15 lg:p-0 lg:pr-15">
+            <figure className="relative -mt-12 aspect-4/3 w-full shrink-0 overflow-hidden sm:-mt-16 sm:aspect-16/10 lg:mt-0 lg:-ml-20 lg:aspect-auto lg:h-125 lg:w-216 lg:shrink">
               <Image
-                src="/images/table.webp"
-                alt="Architectural plans and construction tools on a workbench"
+                src="/images/office-front.webp"
+                alt="The Ashoka Brothers office, with the OSCAR X sign on its front wall"
                 fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 270px, 864px"
+                className="object-cover object-[35%_60%]"
+                sizes="(max-width: 1023px) calc(100vw - 90px), 864px"
               />
-            </div>
+              <figcaption className="absolute bottom-3 left-3 bg-[#f4efe6] px-3 py-2 font-sans text-[10px] leading-3 font-semibold tracking-[0.16em] text-[#282828] uppercase sm:bottom-5 sm:left-5 sm:px-4 sm:py-2.5 sm:text-[12px]">
+                Visit our office
+              </figcaption>
+            </figure>
 
-            <div className="flex flex-1 flex-col justify-center lg:py-12">
+            <div className="flex flex-1 flex-col justify-center lg:min-w-75 lg:py-12">
               <ScrollRevealText
                 as="h3"
                 className="font-serif text-[24px] leading-8 tracking-[1px] text-white max-md:hidden sm:text-[40px] sm:leading-10"

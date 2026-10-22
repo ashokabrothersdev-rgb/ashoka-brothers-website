@@ -1,5 +1,11 @@
 export const munniImage = (file: string) => `/munni/images/${file}`;
 
+// AV1 first (sharpest per byte), H.264 for browsers without AV1 decode
+export const munniVideo = (name: string) => [
+  { src: `/munni/video/${name}-av1.mp4`, type: 'video/mp4; codecs="av01.0.08M.10"' },
+  { src: `/munni/video/${name}-h264.mp4`, type: "video/mp4" },
+];
+
 export const introLines = [
   "Ashoka Brothers, the right",
   "hardware for a firm hold,",

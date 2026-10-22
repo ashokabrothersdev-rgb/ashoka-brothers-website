@@ -1,5 +1,6 @@
 import { KnowMore } from "./KnowMore";
-import { munniImage } from "@/data/home-page.data";
+import { AutoplayVideo } from "@/components/shared/AutoplayVideo";
+import { munniImage, munniVideo } from "@/data/home-page.data";
 
 export function HomeWhy() {
   return (
@@ -38,14 +39,10 @@ export function HomeWhy() {
         </div>
         <KnowMore href="/about-us">know more</KnowMore>
         <div className="pic full relative no_overflow halfMargin">
-          <video
+          <AutoplayVideo
+            sources={munniVideo("why-choose-us")}
             className="fit"
-            src="/munni/video/why-choose-us.webm"
-            muted
-            autoPlay
-            loop
-            playsInline
-            preload="auto"
+            aria-hidden="true"
             data-scroll=""
             data-scroll-speed="-1"
           />

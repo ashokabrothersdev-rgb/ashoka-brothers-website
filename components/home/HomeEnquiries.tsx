@@ -1,4 +1,6 @@
 import { KnowMore } from "./KnowMore";
+import { AutoplayVideo } from "@/components/shared/AutoplayVideo";
+import { munniVideo } from "@/data/home-page.data";
 
 export function HomeEnquiries() {
   return (
@@ -33,13 +35,10 @@ export function HomeEnquiries() {
               data-scroll=""
               data-scroll-id="diningVideo"
             >
-              <video
+              <AutoplayVideo
+                sources={munniVideo("bulk-enquiries")}
                 className="fit has_transition_800"
-                src="/munni/video/bulk-enquiries.webm"
-                muted
-                autoPlay
-                loop
-                playsInline
+                aria-hidden="true"
               />
             </div>
           </div>
