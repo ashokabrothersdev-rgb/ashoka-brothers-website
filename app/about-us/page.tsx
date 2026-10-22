@@ -21,7 +21,7 @@ export default function AboutUsPage() {
       <VisionSection
         title={aboutPage.visionTitle}
         description={aboutPage.visionDescription}
-        images={aboutPage.visionImages}
+        image={aboutPage.visionImage}
       />
       <ValuesCarousel items={aboutPage.carouselData} />
     </>

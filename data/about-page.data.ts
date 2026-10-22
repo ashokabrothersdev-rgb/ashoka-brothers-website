@@ -11,20 +11,10 @@ export type AboutCarouselItem = {
   description: string;
 };
 
-const visionImages: VisionImage[] = [
-  {
-    src: "/images/about/about-1.png",
-    alt: "Vision 1",
-  },
-  {
-    src: "/images/about/about-1.png",
-    alt: "Vision 2",
-  },
-  {
-    src: "/images/about/about-1.png",
-    alt: "Vision 3",
-  },
-];
+const visionImage: VisionImage = {
+  src: "/images/about/about-1.png",
+  alt: "A man in a suit seated at his office desk",
+};
 
 const carouselData: AboutCarouselItem[] = [
   {
@@ -82,7 +72,7 @@ export const aboutPage = {
   visionTitle: "Our Vision",
   visionDescription:
     "To be a trusted name in hardware, delivering reliable fastening solutions with consistent quality and lasting performance for every customer, every project, and every requirement",
-  visionImages,
+  visionImage,
   carouselData,
   EASE,
   COLLAPSED_WIDTH,

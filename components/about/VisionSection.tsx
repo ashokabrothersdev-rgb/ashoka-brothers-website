@@ -1,64 +1,28 @@
 "use client";
 
-import { CarouselControls } from "@/components/about/CarouselControls";
 import { ReadMoreButton } from "@/components/shared/ReadMoreButton";
 import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { ScrewMark } from "@/components/shared/ScrewMark";
 import { aboutPage, VisionImage } from "@/data/about-page.data";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState } from "react";
 
 type VisionSectionProps = {
   title: string;
   description: string;
-  images: VisionImage[];
-};
-
-const slideVariants = {
-  enter: (dir: number) => ({ x: dir >= 0 ? "100%" : "-100%" }),
-  center: { x: "0%" },
-  exit: (dir: number) => ({ x: dir >= 0 ? "-100%" : "100%" }),
-};
-
-const fadeVariants = {
-  enter: { opacity: 0, x: 0 },
-  center: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: 0 },
+  image: VisionImage;
 };
 
 export function VisionSection({
   title,
   description,
-  images,
+  image,
 }: VisionSectionProps) {
-  const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const locked = useRef(false);
   const reduceMotion = useReducedMotion();
-  const count = images.length;
-  const duration = reduceMotion ? 0 : 0.6;
-  const current = images[index];
-
-  const paginate = (dir: 1 | -1) => {
-    if (locked.current || count < 2) return;
-    locked.current = true;
-    setDirection(dir);
-    setIndex((value) => (value + dir + count) % count);
-    window.setTimeout(
-      () => {
-        locked.current = false;
-      },
-      duration * 1000 + 40,
-    );
-  };
-
-  if (!current) return null;
 
   return (
     <section
       aria-labelledby="our-vision-heading"
-      aria-roledescription="carousel"
       className="relative bg-white"
     >
       <div
@@ -107,38 +71,13 @@ export function VisionSection({
           />
           <div className="relative z-10 overflow-hidden bg-[#141414]">
             <div className="relative aspect-3/2 min-h-55">
-              <AnimatePresence initial={false} custom={direction}>
-                <motion.div
-                  key={index}
-                  custom={direction}
-                  variants={reduceMotion ? fadeVariants : slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    duration: reduceMotion ? 0 : 0.7,
-                    ease: aboutPage.EASE,
-                  }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={current.src}
-                    alt={current.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 92vw, 58vw"
-                  />
-                </motion.div>
-              </AnimatePresence>
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-linear-to-t from-black/55 to-transparent" />
-              {count > 1 ? (
-                <CarouselControls
-                  onBack={() => paginate(-1)}
-                  onNext={() => paginate(1)}
-                  tone="light"
-                  className="absolute inset-x-0 bottom-0 z-20 px-4 py-4 sm:px-6 sm:py-5"
-                />
-              ) : null}
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 92vw, 58vw"
+              />
             </div>
           </div>
         </motion.div>
