@@ -37,13 +37,15 @@ export function BlogCard({ blog }: { blog: Blog }) {
 
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-3.5">
-            <Image
-              src={blog.authorImage}
-              alt={blog.author}
-              width={42}
-              height={42}
-              className="size-10.5 shrink-0 rounded-full object-cover"
-            />
+            <span className="flex size-10.5 shrink-0 items-center justify-center rounded-full bg-[#f4efe6]">
+              <Image
+                src="/icons/screw-100.svg"
+                alt=""
+                width={24}
+                height={24}
+                className="size-6"
+              />
+            </span>
             <p className="truncate text-[14px] leading-4 text-[#505050] sm:text-[16px]">
               {blog.author} <span className="text-[#505050]">|</span>{" "}
               {blog.date}

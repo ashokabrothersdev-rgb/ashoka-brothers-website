@@ -1,3 +1,4 @@
+import { BioSection } from "@/components/about/BioSection";
 import { ValuesCarousel } from "@/components/about/ValuesCarousel";
 import { VisionSection } from "@/components/about/VisionSection";
 import { AboutSection } from "@/components/shared/AboutSection";
@@ -18,6 +19,7 @@ export default function AboutUsPage() {
         description={aboutPage.description}
         readMoreDescription={aboutPage.readMoreDescription}
       />
+      <BioSection />
       <VisionSection
         title={aboutPage.visionTitle}
         description={aboutPage.visionDescription}
