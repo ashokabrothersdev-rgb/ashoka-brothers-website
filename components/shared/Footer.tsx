@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { AutoplayVideo } from "@/components/shared/AutoplayVideo";
 import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import {
   contactLinks,
@@ -110,17 +111,11 @@ export function Footer() {
           </div>
 
           <div className="relative min-h-60 lg:min-h-95">
-            <video
+            <AutoplayVideo
+              sources={[{ src: "/videos/footer-video.mp4", type: "video/mp4" }]}
               className="absolute inset-0 size-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
               aria-label="Factory process video"
-            >
-              <source src="/videos/footer-video.mp4" type="video/mp4" />
-            </video>
+            />
           </div>
         </div>
 

@@ -220,6 +220,7 @@
 .munni-home #homeTop {
   height: 100vh;
   position: relative;
+  background: #000;
 }
 .munni-home #imgTop { height: 100%; }
 .munni-home #scrollDown {
@@ -246,56 +247,6 @@
   stroke-dashoffset: 0;
   transition: all 1500ms 100ms cubic-bezier(0.575, 0.005, 0.285, 1.005);
 }
-.munni-home #homeVideo {
-  position: absolute;
-  bottom: calc(2.5vw + 48px);
-  width: 24vw;
-  height: 12vw;
-  left: 5vw;
-  cursor: pointer;
-}
-.munni-home #homeVideo video { transform: scale(1.5); }
-.munni-home #homeVideo.open {
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  z-index: 5;
-}
-.munni-home #homeVideo.open video { transform: scale(1); }
-.munni-home #homeVideoContainer { width: 100%; height: 100%; }
-.munni-home .videoLabel {
-  width: 100%;
-  padding: 0.5vw 2vw 0.5vw 0;
-  display: flex;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  transform-origin: bottom;
-  background: #a19b91;
-}
-.munni-home .videoLabel .top_ultralow {
-  transform: translateY(10px);
-  opacity: 0;
-}
-.munni-home .show .top_ultralow,
-.munni-home .top_ultralow.show {
-  transform: none;
-  opacity: 1;
-}
-
-.munni-video-close {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 80;
-  width: 2.3vw;
-  height: 2.3vw;
-  min-width: 36px;
-  min-height: 36px;
-  pointer-events: none;
-}
-.munni-video-close svg { width: 100%; height: 100%; display: block; }
-
 .munni-home #homeBlue {
   display: flex;
   justify-content: space-between;
@@ -1109,7 +1060,6 @@
 }
 
 @media (max-width: 768px) {
-  .munni-home #homeVideo,
   .munni-home .ngAct__images { display: none; }
   .munni-home #homeActivities { padding: 90px 0; }
   .munni-home .ngAct__content { width: 90%; }

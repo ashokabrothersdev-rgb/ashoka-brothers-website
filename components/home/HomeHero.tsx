@@ -1,21 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+import { useEffect, useRef } from "react";
+import { preload } from "react-dom";
+import { AutoplayVideo } from "@/components/shared/AutoplayVideo";
+import { munniImage, munniVideo } from "@/data/home-page.data";
 import { getLoco } from "@/lib/locomotive";
-import { munniImage } from "@/data/home-page.data";
+
+const heroPoster = munniImage("hero-poster.webp");
 
 export function HomeHero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const videoWrapRef = useRef<HTMLDivElement>(null);
-  const labelRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [open, setOpen] = useState(false);
-  const [cursor, setCursor] = useState({ x: 0, y: 0 });
-  const [mounted, setMounted] = useState(false);
+  // First frame of the video, painted while the video itself buffers
+  preload(heroPoster, { as: "image", fetchPriority: "high" });
 
   useEffect(() => {
-    setMounted(true);
     const section = sectionRef.current;
     if (!section) return;
 
@@ -29,21 +27,8 @@ export function HomeHero() {
     fitMobile();
     window.addEventListener("resize", fitMobile);
 
-    const desktop = window.matchMedia("(min-width: 741px)").matches;
-    if (desktop && videoRef.current) {
-      videoRef.current.src = "/munni/video/hero.webm";
-    }
-    const revealVideo = window.setTimeout(() => {
-      videoWrapRef.current?.classList.add("show");
-    }, 500);
-    const revealLabel = window.setTimeout(() => {
-      labelRef.current?.classList.add("show");
-    }, 1000);
-
     return () => {
       window.removeEventListener("resize", fitMobile);
-      window.clearTimeout(revealVideo);
-      window.clearTimeout(revealLabel);
     };
   }, []);
 
@@ -59,13 +44,13 @@ export function HomeHero() {
 
   return (
     <section id="homeTop" ref={sectionRef}>
-      <div id="imgTop" className="relative no_overflow pic veiled">
-        <img
-          alt=""
-          src={munniImage("hero.webp")}
-          width={2000}
-          height={1125}
+      <div id="imgTop" className="relative no_overflow">
+        <AutoplayVideo
+          sources={munniVideo("hero")}
+          eager
+          poster={heroPoster}
           className="fit"
+          aria-hidden="true"
           data-scroll=""
           data-scroll-speed="-2"
         />
@@ -87,45 +72,6 @@ export function HomeHero() {
           <path d="M 0 5 L14 5 M14 5 L08 0 M14 5 L08 10" stroke="white" />
         </svg>
       </button>
-      <div
-        id="homeVideo"
-        className={`has_transition_1500 transition_all${open ? " open" : ""}`}
-        onClick={() => setOpen((value) => !value)}
-        onMouseMove={(event) => {
-          if (!open) return;
-          setCursor({ x: event.clientX, y: event.clientY });
-        }}
-      >
-        <div id="homeVideoContainer" ref={videoWrapRef} className="relative no_overflow">
-          <div className="mask_top no_overflow has_transition_1000_inout full full_height fast_rewind">
-            <div className="t_container no_overflow has_transition_1000_inout full_height fast_rewind">
-              <video ref={videoRef} className="fit has_transition_1500" muted autoPlay loop playsInline />
-            </div>
-          </div>
-        </div>
-        <div ref={labelRef} className="videoLabel no_height has_transition_800">
-          <span className="text block smaller top_ultralow has_transition_1000 d200 uppercase">
-            full screen
-          </span>
-        </div>
-      </div>
-      {mounted && open
-        ? createPortal(
-            <div
-              className="munni-video-close"
-              style={{ transform: `translate(${cursor.x}px, ${cursor.y}px)` }}
-            >
-              <svg viewBox="0 0 91.7 91.4" aria-hidden="true">
-                <polygon
-                  points="47.7,45.7 63.7,29.7 61.8,27.7 45.7,43.7 29.7,27.6 27.6,29.7 43.7,45.7 27.6,61.8 29.6,63.8 45.7,47.7 61.8,63.8 63.8,61.8"
-                  fill="#FFFFFF"
-                />
-                <circle cx="45.7" cy="45.7" r="44.1" stroke="#FFFFFF" fill="none" strokeWidth="3" />
-              </svg>
-            </div>,
-            document.body,
-          )
-        : null}
     </section>
   );
 }
