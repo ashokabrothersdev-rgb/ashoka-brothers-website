@@ -4,7 +4,7 @@ import { useRef, useState, type KeyboardEvent } from "react";
 import { ReadMoreButton } from "@/components/shared/ReadMoreButton";
 import { ScrollRevealText } from "@/components/shared/ScrollRevealText";
 import { sizeCharts } from "@/data/size-charts.data";
-import { getLoco } from "@/lib/locomotive";
+import { getLoco, scrollToElement } from "@/lib/locomotive";
 
 export function SizeCharts() {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -31,13 +31,7 @@ export function SizeCharts() {
   const enquire = () => {
     close();
     const target = document.getElementById("contact");
-    const loco = getLoco();
-    if (target && loco) {
-      loco.start();
-      loco.scrollTo(target, { offset: 0, duration: 900 });
-      return;
-    }
-    target?.scrollIntoView({ behavior: "smooth" });
+    if (target) scrollToElement(target);
   };
 
   const onTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
